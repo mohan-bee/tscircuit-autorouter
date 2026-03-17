@@ -754,6 +754,26 @@ export class HgPortPointPathingSolver extends HyperGraphSolver<
     return pf
   }
 
+  computeNodePf(node: InputNodeWithPortPoints): number | null {
+    const solvedNode = this.getOutput().nodesWithPortPoints.find(
+      (candidate) => candidate.capacityMeshNodeId === node.capacityMeshNodeId,
+    )
+    const region = this.params.graph.regions.find(
+      (candidate) => candidate.d.capacityMeshNodeId === node.capacityMeshNodeId,
+    )
+
+    if (!solvedNode || !region) return null
+
+    const crossings = getIntraNodeCrossingsUsingCircle(solvedNode)
+
+    return calculateNodeProbabilityOfFailure(
+      region.d,
+      crossings.numSameLayerCrossings,
+      crossings.numEntryExitLayerChanges,
+      crossings.numTransitionPairCrossings,
+    )
+  }
+
   override getOutput(): {
     nodesWithPortPoints: NodeWithPortPoints[]
     inputNodeWithPortPoints: InputNodeWithPortPoints[]
