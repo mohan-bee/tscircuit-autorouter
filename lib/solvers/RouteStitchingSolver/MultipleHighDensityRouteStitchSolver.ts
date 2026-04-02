@@ -253,6 +253,65 @@ export class MultipleHighDensityRouteStitchSolver extends BaseSolver {
       })
     }
 
+    const unsolvedRoutesByConnection = new Map<string, UnsolvedRoute[]>()
+    for (const unsolvedRoute of this.unsolvedRoutes) {
+      const routes = unsolvedRoutesByConnection.get(
+        unsolvedRoute.connectionName,
+      )
+      if (routes) {
+        routes.push(unsolvedRoute)
+      } else {
+        unsolvedRoutesByConnection.set(unsolvedRoute.connectionName, [
+          unsolvedRoute,
+        ])
+      }
+    }
+
+    this.unsolvedRoutes = Array.from(
+      unsolvedRoutesByConnection.entries(),
+    ).flatMap(([connectionName, unsolvedRoutes]) => {
+      const hasDegenerateRoute = unsolvedRoutes.some((unsolvedRoute) =>
+        unsolvedRoute.hdRoutes.some((hdRoute) => hdRoute.route.length < 2),
+      )
+
+      if (!hasDegenerateRoute) {
+        return unsolvedRoutes
+      }
+
+      const connection = params.connections.find(
+        (c) => c.name === connectionName,
+      )
+      if (!connection) return unsolvedRoutes
+
+      const start = {
+        ...connection.pointsToConnect[0],
+        z: mapLayerNameToZ(
+          getConnectionPointLayer(connection.pointsToConnect[0]),
+          params.layerCount,
+        ),
+      }
+      const end = {
+        ...connection.pointsToConnect[1],
+        z: mapLayerNameToZ(
+          getConnectionPointLayer(connection.pointsToConnect[1]),
+          params.layerCount,
+        ),
+      }
+
+      const hdRoutes = unsolvedRoutes.flatMap(
+        (unsolvedRoute) => unsolvedRoute.hdRoutes,
+      )
+
+      return [
+        {
+          connectionName,
+          hdRoutes: this.selectRoutesAlongEndpointPath(hdRoutes, start, end),
+          start,
+          end,
+        },
+      ]
+    })
+
     this.MAX_ITERATIONS = 100e3
   }
 
