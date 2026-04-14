@@ -27,7 +27,7 @@
     "@tscircuit/autorouting-dataset-01": "^1.0.32",
     "@tscircuit/checks": "^0.0.114",
     "@tscircuit/circuit-json-util": "^0.0.90",
-    "@tscircuit/core": "^0.0.337",
+    "@tscircuit/core": "^0.0.1157",
     "@tscircuit/curvy-trace-solver": "^0.0.10",
     "@tscircuit/dataset-srj05": "git+https://github.com/tscircuit/dataset-srj05.git#9a49c126a89c083dc4d2b72cd17184735f637762",
     "@tscircuit/fixed-via-hypergraph-solver": "https://codeload.github.com/tscircuit/fixed-via-hypergraph-solver/tar.gz/bed37a6201b5dd07c9cc68b828917ecc20d6d049",
