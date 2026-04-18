@@ -2,10 +2,14 @@ import { expect, test } from "bun:test"
 import type { SimpleRouteJson, SimplifiedPcbTrace } from "lib/types"
 import { convertToCircuitJson } from "lib/testing/utils/convertToCircuitJson"
 
-const createSrj = (minViaDiameter?: number): SimpleRouteJson => ({
+const createSrj = (
+  minViaDiameter?: number,
+  minViaHole?: number,
+): SimpleRouteJson => ({
   layerCount: 2,
   minTraceWidth: 0.1,
   ...(minViaDiameter !== undefined ? { minViaDiameter } : {}),
+  ...(minViaHole !== undefined ? { minViaHole } : {}),
   obstacles: [],
   connections: [
     {
@@ -19,7 +23,10 @@ const createSrj = (minViaDiameter?: number): SimpleRouteJson => ({
   bounds: { minX: -2, maxX: 2, minY: -2, maxY: 2 },
 })
 
-const createSimplifiedTraces = (viaDiameter?: number): SimplifiedPcbTrace[] => [
+const createSimplifiedTraces = (
+  viaDiameter?: number,
+  viaHoleDiameter?: number,
+): SimplifiedPcbTrace[] => [
   {
     type: "pcb_trace",
     pcb_trace_id: "conn_1_0",
@@ -33,6 +40,9 @@ const createSimplifiedTraces = (viaDiameter?: number): SimplifiedPcbTrace[] => [
         from_layer: "top",
         to_layer: "bottom",
         ...(viaDiameter !== undefined ? { via_diameter: viaDiameter } : {}),
+        ...(viaHoleDiameter !== undefined
+          ? { via_hole_diameter: viaHoleDiameter }
+          : {}),
       },
       { route_type: "wire", x: 1, y: 1, width: 0.1, layer: "bottom" },
     ],
@@ -67,4 +77,24 @@ test("falls back to 0.3 when neither actual nor srj min via diameter is availabl
   const vias = circuitJson.filter((e) => e.type === "pcb_via")
   expect(vias).toHaveLength(1)
   expect(vias[0].outer_diameter).toBe(0.3)
+})
+
+test("uses actual via hole diameter from simplified route when available", () => {
+  const circuitJson = convertToCircuitJson(
+    createSrj(0.24, 0.12),
+    createSimplifiedTraces(0.33, 0.18),
+  )
+  const vias = circuitJson.filter((e) => e.type === "pcb_via")
+  expect(vias).toHaveLength(1)
+  expect(vias[0].hole_diameter).toBe(0.18)
+})
+
+test("falls back to srj.minViaHole when actual hole diameter is missing", () => {
+  const circuitJson = convertToCircuitJson(
+    createSrj(0.24, 0.11),
+    createSimplifiedTraces(),
+  )
+  const vias = circuitJson.filter((e) => e.type === "pcb_via")
+  expect(vias).toHaveLength(1)
+  expect(vias[0].hole_diameter).toBe(0.11)
 })
