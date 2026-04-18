@@ -46,6 +46,7 @@ export interface SimpleRouteJson {
   minTraceWidth: number
   nominalTraceWidth?: number
   minViaDiameter?: number
+  minViaHole?: number
   defaultObstacleMargin?: number
   obstacles: Obstacle[]
   connections: Array<SimpleRouteConnection>
@@ -104,6 +105,7 @@ export interface SimplifiedPcbTrace {
         to_layer: string
         from_layer: string
         via_diameter?: number
+        via_hole_diameter?: number
       }
     | {
         route_type: "jumper"
