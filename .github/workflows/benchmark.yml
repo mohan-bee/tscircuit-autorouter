@@ -36,6 +36,11 @@ on:
         description: 'Dataset to benchmark (optional: dataset01, zdwiel, or srj05)'
         required: false
         type: string
+      profile_solvers:
+        description: Show profile-solvers output for the benchmark scenarios
+        required: false
+        default: false
+        type: boolean
       ref:
         description: Git ref (branch, tag, or SHA) to benchmark
         required: false
@@ -165,13 +170,69 @@ jobs:
 
             let benchmarkArgs = []
             let benchmarkConcurrency = ''
+            let profileSolvers = false
             let ref = context.sha
             let statusCommentId = ''
+
+            const stripProfileSolversFlag = (args) => {
+              const stripped = []
+              for (const arg of args) {
+                if (arg === '--profile-solvers' || arg === '--show-profile-solvers') {
+                  profileSolvers = true
+                  continue
+                }
+                stripped.push(arg)
+              }
+              return stripped
+            }
+
+            const buildProfileSolversArgs = (args) => {
+              const profileArgs = []
+              const positionals = []
+
+              for (let i = 0; i < args.length; i += 1) {
+                const arg = args[i]
+                if (arg === '--scenario-limit' || arg === '--dataset' || arg === '--effort') {
+                  const value = args[i + 1]
+                  if (value && !value.startsWith('-')) {
+                    profileArgs.push(arg, value)
+                    i += 1
+                  }
+                  continue
+                }
+
+                if (!arg.startsWith('-')) {
+                  positionals.push(arg)
+                  continue
+                }
+
+                if (
+                  [
+                    '--solver',
+                    '--pipeline',
+                    '--concurrency',
+                    '--sample-timeout',
+                  ].includes(arg)
+                ) {
+                  i += 1
+                }
+              }
+
+              if (
+                !profileArgs.includes('--scenario-limit') &&
+                positionals.length >= 2 &&
+                /^\d+$/.test(positionals[1])
+              ) {
+                profileArgs.push('--scenario-limit', positionals[1])
+              }
+
+              return profileArgs
+            }
 
             if (isComment) {
               const body = context.payload.comment.body.trim()
               const commentArgs = body.replace(/^\/benchmark\b/, '').trim()
-              benchmarkArgs = splitShellArgs(commentArgs)
+              benchmarkArgs = stripProfileSolversFlag(splitShellArgs(commentArgs))
 
               const pr = await github.rest.pulls.get({
                 owner: context.repo.owner,
@@ -206,6 +267,7 @@ jobs:
               const concurrency = (inputs.concurrency || '').trim()
               const includeAssignable = inputs.include_assignable === true || inputs.include_assignable === 'true'
               const datasetName = (inputs.dataset_name || '').trim()
+              profileSolvers = inputs.profile_solvers === true || inputs.profile_solvers === 'true'
 
               if (scenarioLimit) {
                 benchmarkArgs.push('--scenario-limit', scenarioLimit)
@@ -231,6 +293,8 @@ jobs:
 
             core.setOutput('benchmark_args_json', JSON.stringify(benchmarkArgs))
             core.setOutput('benchmark_concurrency', benchmarkConcurrency)
+            core.setOutput('profile_solvers', profileSolvers ? 'true' : 'false')
+            core.setOutput('profile_solvers_args_json', JSON.stringify(buildProfileSolversArgs(benchmarkArgs)))
             core.setOutput('ref', ref)
             core.setOutput('status_comment_id', statusCommentId)
 
@@ -300,6 +364,342 @@ jobs:
             echo "" > benchmark-result-main.json
           fi
 
+      - name: Post benchmark result comment before profile-solvers
+        if: github.event_name == 'issue_comment' && steps.parse.outputs.status_comment_id != ''
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.TSCIRCUIT_BOT_GITHUB_TOKEN }}
+          script: |
+            const fs = require('node:fs')
+            const maxLength = 60000
+            const truncate = (s, max) => s.length > max ? `${s.slice(0, max)}\n\n...truncated...` : s
+            const formatTime = (timeMs) => {
+              if (typeof timeMs !== 'number' || !Number.isFinite(timeMs)) {
+                return 'n/a'
+              }
+              return timeMs < 1000 ? `${Math.round(timeMs)}ms` : `${(timeMs / 1000).toFixed(1)}s`
+            }
+            const getStatus = (test) => {
+              if (test.didTimeout) return '❌'
+              if (test.didSolve) return '✅'
+              return '❌'
+            }
+            const getDrc = (test) => {
+              if (!test.didSolve) return '❌'
+              return test.relaxedDrcPassed ? '✅' : '❌'
+            }
+            const renderSummary = (report) => {
+              if (!Array.isArray(report?.summary) || report.summary.length === 0) {
+                return []
+              }
+              return [
+                `Dataset: ${report.datasetName}`,
+                `Scenarios: ${report.scenarioCount}`,
+                `Effort: ${report.effortLabel}`,
+                '',
+                '| Solver | Completed % | Relaxed DRC Pass % | Timed Out | P50 Time | P95 Time |',
+                '| --- | --- | --- | --- | --- | --- |',
+                ...report.summary.map((row) =>
+                  `| ${row.solverName} | ${row.completedRateLabel} | ${row.relaxedDrcRateLabel} | ${row.timedOutLabel} | ${formatTime(row.p50TimeMs)} | ${formatTime(row.p95TimeMs)} |`,
+                ),
+              ]
+            }
+            const getOutcomeScore = (test) => {
+              if (!test?.didSolve) return 0
+              if (test.relaxedDrcPassed) return 2
+              return 1
+            }
+            const buildMainIndex = (report) => {
+              if (!Array.isArray(report?.tests)) return new Map()
+              return new Map(
+                report.tests.map((test) => [
+                  `${test.solverName}::${test.scenarioName}`,
+                  test,
+                ]),
+              )
+            }
+            const getDelta = (test, mainIndex) => {
+              if (!mainIndex) return ''
+              const key = `${test.solverName}::${test.scenarioName}`
+              const mainTest = mainIndex.get(key)
+              if (!mainTest) return ''
+              const prScore = getOutcomeScore(test)
+              const mainScore = getOutcomeScore(mainTest)
+              if (prScore > mainScore) return '✅'
+              if (prScore < mainScore) return '❌'
+              return ''
+            }
+            const renderTests = (report, options = {}) => {
+              const includeDelta = Boolean(options.includeDelta)
+              const mainIndex = options.mainIndex
+              if (!Array.isArray(report?.tests) || report.tests.length === 0) {
+                return ['Per-test results unavailable.']
+              }
+              const header = includeDelta
+                ? [
+                    '| Solver | Scenario | Status | Time | Relaxed DRC | Delta |',
+                    '| --- | --- | --- | --- | --- | --- |',
+                  ]
+                : [
+                    '| Solver | Scenario | Status | Time | Relaxed DRC |',
+                    '| --- | --- | --- | --- | --- |',
+                  ]
+              return [
+                ...header,
+                ...report.tests.map((test) =>
+                  includeDelta
+                    ? `| ${test.solverName} | ${test.scenarioName} | ${getStatus(test)} | ${formatTime(test.elapsedTimeMs)} | ${getDrc(test)} | ${getDelta(test, mainIndex)} |`
+                    : `| ${test.solverName} | ${test.scenarioName} | ${getStatus(test)} | ${formatTime(test.elapsedTimeMs)} | ${getDrc(test)} |`,
+                ),
+              ]
+            }
+            const renderReport = (report, fallbackText, options = {}) => {
+              if (!report) {
+                return ['```', truncate(fallbackText, maxLength), '```']
+              }
+              return [
+                ...renderSummary(report),
+                '',
+                '<details>',
+                '<summary>Details</summary>',
+                '',
+                ...renderTests(report, options),
+                '</details>',
+              ]
+            }
+            const readJson = (path) => {
+              if (!fs.existsSync(path)) return null
+              const raw = fs.readFileSync(path, 'utf8').trim()
+              if (!raw) return null
+              try {
+                return JSON.parse(raw)
+              } catch {
+                return null
+              }
+            }
+            const readText = (path) => fs.existsSync(path) ? fs.readFileSync(path, 'utf8').trim() : null
+
+            const prText = readText('benchmark-result-pr.txt') ?? readText('benchmark-result.txt')
+            const mainText = readText('benchmark-result-main.txt') ?? '(not available)'
+            const prReport = readJson('benchmark-result-pr.json') ?? readJson('benchmark-result.json')
+            const mainReport = readJson('benchmark-result-main.json')
+            const mainIndex = buildMainIndex(mainReport)
+            const runUrl = `${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}`
+            const profileEnabled = '${{ steps.parse.outputs.profile_solvers }}' === 'true'
+
+            const body = [
+              '## 🏃 Autorouting Benchmark Results',
+              '',
+              ...(profileEnabled
+                ? [
+                    '🧭 **Profile Solvers:** running. Benchmark results are ready; profile comparison tables will be added when profiling finishes.',
+                    '',
+                  ]
+                : []),
+              '<details>',
+              '<summary>📊 Main Branch Results</summary>',
+              '',
+              ...renderReport(mainReport, mainText),
+              '</details>',
+              '',
+              '<details open>',
+              '<summary>📊 PR Results</summary>',
+              '',
+              ...renderReport(prReport, prText ?? '(benchmark results were not produced)', { includeDelta: true, mainIndex }),
+              ...(profileEnabled
+                ? [
+                    '',
+                    '⏳ Profile solver comparison is still running.',
+                  ]
+                : []),
+              '</details>',
+              '',
+              `🔗 Workflow: [View run](${runUrl})`,
+              `📦 Artifact: ${runUrl}`,
+            ].join('\n')
+
+            await github.rest.issues.updateComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              comment_id: Number('${{ steps.parse.outputs.status_comment_id }}'),
+              body: body.length > maxLength ? truncate(body, maxLength) : body,
+            })
+
+      - name: Run profile-solvers (PR)
+        if: steps.parse.outputs.profile_solvers == 'true'
+        env:
+          PROFILE_SOLVERS_ARGS_JSON: ${{ steps.parse.outputs.profile_solvers_args_json }}
+          PROFILE_SOLVERS_HEARTBEAT_INTERVAL_MS: ${{ vars.PROFILE_SOLVERS_HEARTBEAT_INTERVAL_MS || '40000' }}
+          PROFILE_SOLVERS_TIMEOUT_MS: ${{ vars.PROFILE_SOLVERS_TIMEOUT_MS || '700000' }}
+        run: |
+          node <<'NODE'
+          const { copyFileSync, createWriteStream, existsSync } = require('node:fs')
+          const { spawn } = require('node:child_process')
+
+          const getProfileSolversTimeoutMs = () => {
+            const timeoutMs = Number.parseInt(process.env.PROFILE_SOLVERS_TIMEOUT_MS || '', 10)
+            if (!Number.isFinite(timeoutMs) || timeoutMs < 1) {
+              return 700000
+            }
+            return timeoutMs
+          }
+
+          const run = async () => {
+            const args = JSON.parse(process.env.PROFILE_SOLVERS_ARGS_JSON || '[]')
+            const command = ['bun', 'scripts/profile-solvers.ts', ...args]
+            const profileSolversTimeoutMs = getProfileSolversTimeoutMs()
+            console.log(`Running profile-solvers command: ${command.map((arg) => JSON.stringify(arg)).join(' ')}`)
+            console.log(`Profile-solvers timeout: ${Math.round(profileSolversTimeoutMs / 1000)}s`)
+
+            const output = createWriteStream('profile-solvers-pr.txt')
+            const child = spawn(command[0], command.slice(1), {
+              env: process.env,
+              stdio: ['ignore', 'pipe', 'pipe'],
+            })
+            let didTimeout = false
+            let childClosed = false
+            const timeout = setTimeout(() => {
+              didTimeout = true
+              const message = `\n[profile-solvers] timed out after ${Math.round(profileSolversTimeoutMs / 1000)}s; continuing benchmark workflow without PR profile JSON\n`
+              process.stderr.write(message)
+              output.write(message)
+              child.kill('SIGTERM')
+              setTimeout(() => {
+                if (!childClosed) {
+                  child.kill('SIGKILL')
+                }
+              }, 5000)
+            }, profileSolversTimeoutMs)
+
+            child.stdout.on('data', (chunk) => {
+              process.stdout.write(chunk)
+              output.write(chunk)
+            })
+            child.stderr.on('data', (chunk) => {
+              process.stderr.write(chunk)
+              output.write(chunk)
+            })
+
+            const exitCode = await new Promise((resolve, reject) => {
+              child.on('error', reject)
+              child.on('close', (code) => {
+                childClosed = true
+                resolve(code)
+              })
+            })
+            clearTimeout(timeout)
+            await new Promise((resolve) => output.end(resolve))
+
+            if (existsSync('profile-solvers.json')) {
+              copyFileSync('profile-solvers.json', 'profile-solvers-pr.json')
+            }
+
+            process.exit(didTimeout ? 0 : (exitCode ?? 1))
+          }
+
+          run().catch((error) => {
+            console.error(error)
+            process.exit(1)
+          })
+          NODE
+
+      - name: Checkout main for profile-solvers
+        if: steps.parse.outputs.profile_solvers == 'true' && github.event_name == 'issue_comment'
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-profile
+
+      - name: Copy profile-solvers runner into main checkout
+        if: steps.parse.outputs.profile_solvers == 'true' && github.event_name == 'issue_comment'
+        run: |
+          cp scripts/profile-solvers.ts main-profile/scripts/profile-solvers.ts
+          cp scripts/benchmark/scenarios.ts main-profile/scripts/benchmark/scenarios.ts
+
+      - name: Install main dependencies for profile-solvers
+        if: steps.parse.outputs.profile_solvers == 'true' && github.event_name == 'issue_comment'
+        working-directory: main-profile
+        run: bun install
+
+      - name: Run profile-solvers (main)
+        if: steps.parse.outputs.profile_solvers == 'true' && github.event_name == 'issue_comment'
+        env:
+          PROFILE_SOLVERS_ARGS_JSON: ${{ steps.parse.outputs.profile_solvers_args_json }}
+          PROFILE_SOLVERS_HEARTBEAT_INTERVAL_MS: ${{ vars.PROFILE_SOLVERS_HEARTBEAT_INTERVAL_MS || '30000' }}
+          PROFILE_SOLVERS_TIMEOUT_MS: ${{ vars.PROFILE_SOLVERS_TIMEOUT_MS || '600000' }}
+        working-directory: main-profile
+        run: |
+          node <<'NODE'
+          const { copyFileSync, createWriteStream, existsSync } = require('node:fs')
+          const { spawn } = require('node:child_process')
+
+          const getProfileSolversTimeoutMs = () => {
+            const timeoutMs = Number.parseInt(process.env.PROFILE_SOLVERS_TIMEOUT_MS || '', 10)
+            if (!Number.isFinite(timeoutMs) || timeoutMs < 1) {
+              return 600000
+            }
+            return timeoutMs
+          }
+
+          const run = async () => {
+            const args = JSON.parse(process.env.PROFILE_SOLVERS_ARGS_JSON || '[]')
+            const command = ['bun', 'scripts/profile-solvers.ts', ...args]
+            const profileSolversTimeoutMs = getProfileSolversTimeoutMs()
+            console.log(`Running main profile-solvers command: ${command.map((arg) => JSON.stringify(arg)).join(' ')}`)
+            console.log(`Main profile-solvers timeout: ${Math.round(profileSolversTimeoutMs / 1000)}s`)
+
+            const output = createWriteStream('../profile-solvers-main.txt')
+            const child = spawn(command[0], command.slice(1), {
+              env: process.env,
+              stdio: ['ignore', 'pipe', 'pipe'],
+            })
+            let didTimeout = false
+            let childClosed = false
+            const timeout = setTimeout(() => {
+              didTimeout = true
+              const message = `\n[profile-solvers] timed out after ${Math.round(profileSolversTimeoutMs / 1000)}s; continuing benchmark workflow without main profile JSON\n`
+              process.stderr.write(message)
+              output.write(message)
+              child.kill('SIGTERM')
+              setTimeout(() => {
+                if (!childClosed) {
+                  child.kill('SIGKILL')
+                }
+              }, 5000)
+            }, profileSolversTimeoutMs)
+
+            child.stdout.on('data', (chunk) => {
+              process.stdout.write(chunk)
+              output.write(chunk)
+            })
+            child.stderr.on('data', (chunk) => {
+              process.stderr.write(chunk)
+              output.write(chunk)
+            })
+
+            const exitCode = await new Promise((resolve, reject) => {
+              child.on('error', reject)
+              child.on('close', (code) => {
+                childClosed = true
+                resolve(code)
+              })
+            })
+            clearTimeout(timeout)
+            await new Promise((resolve) => output.end(resolve))
+
+            if (existsSync('profile-solvers.json')) {
+              copyFileSync('profile-solvers.json', '../profile-solvers-main.json')
+            }
+
+            process.exit(didTimeout ? 0 : (exitCode ?? 1))
+          }
+
+          run().catch((error) => {
+            console.error(error)
+            process.exit(1)
+          })
+          NODE
+
       - name: Upload benchmark result
         uses: actions/upload-artifact@v4
         with:
@@ -311,6 +711,10 @@ jobs:
             ./benchmark-result-pr.json
             ./benchmark-result-main.txt
             ./benchmark-result-main.json
+            ./profile-solvers-pr.txt
+            ./profile-solvers-pr.json
+            ./profile-solvers-main.txt
+            ./profile-solvers-main.json
           overwrite: true
 
       - name: Post benchmark result comment
@@ -432,19 +836,115 @@ jobs:
               if (!fs.existsSync(path)) return null
               return fs.readFileSync(path, 'utf8').trim()
             }
+            const formatNumber = (value) => {
+              if (typeof value !== 'number' || !Number.isFinite(value)) {
+                return 'n/a'
+              }
+              return Math.round(value).toLocaleString('en-US')
+            }
+            const formatPercent = (value) => {
+              if (typeof value !== 'number' || !Number.isFinite(value)) {
+                return 'n/a'
+              }
+              return `${value.toFixed(0)}%`
+            }
+            const buildProfileIndex = (report) => {
+              if (!Array.isArray(report?.rows)) return new Map()
+              return new Map(report.rows.map((row) => [row.solverName, row]))
+            }
+            const getSuccessDelta = (mainRow, prRow) => {
+              if (!mainRow || !prRow) return 'n/a'
+              const delta = prRow.scenarioSuccessRate - mainRow.scenarioSuccessRate
+              if (!Number.isFinite(delta)) return 'n/a'
+              const label = `${delta > 0 ? '+' : ''}${delta.toFixed(0)}%`
+              if (delta > 0) return `${label} ✅`
+              if (delta < 0) return `${label} ❌`
+              return label
+            }
+            const renderProfileFallback = (text, unavailableText) => [
+              '```',
+              truncate(text || unavailableText, maxLength),
+              '```',
+            ]
+            const renderMainProfileSolvers = (report, fallbackText) => {
+              if (!Array.isArray(report?.rows) || report.rows.length === 0) {
+                return renderProfileFallback(fallbackText, '(main profile-solvers output was not produced)')
+              }
+
+              return [
+                '| Solver | Scenarios | Success | Iterations | Total Time |',
+                '| --- | ---: | ---: | ---: | ---: |',
+                ...report.rows.map((row) =>
+                  `| ${row.solverName} | ${formatNumber(row.scenarioCount)} | ${formatPercent(row.scenarioSuccessRate)} | ${formatNumber(row.totalIterations)} | ${formatTime(row.totalTimeMs)} |`,
+                ),
+              ]
+            }
+            const renderProfileComparison = (mainReport, prReport, fallbackText) => {
+              if (!Array.isArray(prReport?.rows) || prReport.rows.length === 0) {
+                return renderProfileFallback(fallbackText, '(PR profile-solvers output was not produced)')
+              }
+
+              const mainIndex = buildProfileIndex(mainReport)
+              const prIndex = buildProfileIndex(prReport)
+              const solverNames = [...new Set([...mainIndex.keys(), ...prIndex.keys()])].sort((a, b) => {
+                const aPr = prIndex.get(a)
+                const bPr = prIndex.get(b)
+                const aTime = aPr?.totalTimeMs ?? mainIndex.get(a)?.totalTimeMs ?? 0
+                const bTime = bPr?.totalTimeMs ?? mainIndex.get(b)?.totalTimeMs ?? 0
+                if (aTime !== bTime) return bTime - aTime
+                return a.localeCompare(b)
+              })
+
+              return [
+                '| Solver | Main Scenarios | PR Scenarios | Main Success | PR Success | Main Iterations | PR Iterations | Main Total Time | PR Total Time | Success Delta |',
+                '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |',
+                ...solverNames.map((solverName) => {
+                  const mainRow = mainIndex.get(solverName)
+                  const prRow = prIndex.get(solverName)
+                  return `| ${solverName} | ${formatNumber(mainRow?.scenarioCount)} | ${formatNumber(prRow?.scenarioCount)} | ${formatPercent(mainRow?.scenarioSuccessRate)} | ${formatPercent(prRow?.scenarioSuccessRate)} | ${formatNumber(mainRow?.totalIterations)} | ${formatNumber(prRow?.totalIterations)} | ${formatTime(mainRow?.totalTimeMs)} | ${formatTime(prRow?.totalTimeMs)} | ${getSuccessDelta(mainRow, prRow)} |`
+                }),
+              ]
+            }
+            const renderProfileSolversDetails = (lines) => [
+              '',
+              '<details>',
+              '<summary>🧭 Profile Solvers</summary>',
+              '',
+              ...lines,
+              '</details>',
+            ]
 
             const prText = readText('benchmark-result-pr.txt') ?? readText('benchmark-result.txt')
             const mainText = readText('benchmark-result-main.txt') ?? '(not available)'
+            const prProfileSolversText = readText('profile-solvers-pr.txt')
+            const mainProfileSolversText = readText('profile-solvers-main.txt')
+            const prProfileSolversReport = readJson('profile-solvers-pr.json')
+            const mainProfileSolversReport = readJson('profile-solvers-main.json')
             const prReport = readJson('benchmark-result-pr.json') ?? readJson('benchmark-result.json')
             const mainReport = readJson('benchmark-result-main.json')
             const mainIndex = buildMainIndex(mainReport)
             const runUrl = `${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}`
             const jobStatus = '${{ job.status }}'
             const benchmarkFailed = jobStatus !== 'success'
+            const profileEnabled = '${{ steps.parse.outputs.profile_solvers }}' === 'true'
+            const hasProfileSolvers = Boolean(
+              mainProfileSolversText ||
+                mainProfileSolversReport ||
+                prProfileSolversText ||
+                prProfileSolversReport,
+            )
 
             const body = [
               benchmarkFailed ? '## 🏃 Autorouting Benchmark Failed' : '## 🏃 Autorouting Benchmark Results',
               '',
+              ...(profileEnabled
+                ? [
+                    hasProfileSolvers
+                      ? '✅ **Profile Solvers:** completed. Comparison tables are included below.'
+                      : '⚠️ **Profile Solvers:** requested, but profile output was not produced.',
+                    '',
+                  ]
+                : []),
               ...(benchmarkFailed
                 ? [
                     `❌ Benchmark workflow ended with **${jobStatus}** before completion.`,
@@ -457,12 +957,26 @@ jobs:
               '<summary>📊 Main Branch Results</summary>',
               '',
               ...renderReport(mainReport, mainText),
+              ...(hasProfileSolvers
+                ? renderProfileSolversDetails(
+                    renderMainProfileSolvers(mainProfileSolversReport, mainProfileSolversText),
+                  )
+                : []),
               '</details>',
               '',
               '<details open>',
               '<summary>📊 PR Results</summary>',
               '',
               ...renderReport(prReport, prText ?? '(benchmark results were not produced)', { includeDelta: true, mainIndex }),
+              ...(hasProfileSolvers
+                ? renderProfileSolversDetails(
+                    renderProfileComparison(
+                      mainProfileSolversReport,
+                      prProfileSolversReport,
+                      prProfileSolversText,
+                    ),
+                  )
+                : []),
               '</details>',
               '',
               `🔗 Workflow: [View run](${runUrl})`,
