@@ -900,6 +900,22 @@ class TinyHyperGraphSectionPipelineWithTerminalNetIds extends TinyHyperGraphSect
     this.configureSolver(this.activeSubSolver)
   }
 
+  override computeProgress() {
+    const totalStages = this.pipelineDef.length
+    if (totalStages === 0) return 1
+
+    let currentStageProgress = this.activeSubSolver?.progress ?? 0
+    if (this.activeSubSolver && this.activeSubSolver.MAX_ITERATIONS > 0) {
+      const iterationProgress = Math.min(
+        1,
+        this.activeSubSolver.iterations / this.activeSubSolver.MAX_ITERATIONS,
+      )
+      currentStageProgress = Math.max(currentStageProgress, iterationProgress)
+    }
+
+    return (this.currentPipelineStageIndex + currentStageProgress) / totalStages
+  }
+
   override getInitialVisualizationSolver() {
     if (this.useSelectiveReripRouting && !this.initialVisualizationSolver) {
       const { topology, problem } = this.loadHyperGraph(
