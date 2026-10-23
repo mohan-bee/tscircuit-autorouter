@@ -1,0 +1,22 @@
+{
+  "name": "@tsci/mohan-bee.xiao-budget",
+  "version": "1.0.0",
+  "description": "Cost-focused XIAO-header-compatible RP2040 development board; prototype design",
+  "main": "index.circuit.tsx",
+  "keywords": [
+    "tscircuit",
+    "circuit",
+    "pcb",
+    "electronics"
+  ],
+  "scripts": {
+    "dev": "tsci dev index.circuit.tsx",
+    "build": "tsci build index.circuit.tsx --disable-parts-engine --svgs --pcb-png --autorouter-timeout 120s",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "tscircuit": "0.0.3003",
+    "typescript": "^5.0.0"
+  },
+  "private": true
+}

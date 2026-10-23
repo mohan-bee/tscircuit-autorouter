@@ -1,0 +1,4 @@
+node_modules/
+dist/
+verified-geometry.json
+package-lock.json

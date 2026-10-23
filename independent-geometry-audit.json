@@ -1,0 +1,388 @@
+{
+  "foreign_net_via_pair": {
+    "ids": [
+      "pcb_via_3",
+      "pcb_via_12"
+    ],
+    "center_distance_mm": 0.4762980777432376,
+    "copper_edge_gap_mm": -0.12370192225676235
+  },
+  "via5_pad_conflicts": [
+    {
+      "pad_id": "pcb_smtpad_49",
+      "via_center": {
+        "x": -3.971790984760862,
+        "y": -2.474471814874013
+      },
+      "pad_center": {
+        "x": -3.424936,
+        "y": -2.700025
+      },
+      "pad_width": 0.850011,
+      "pad_height": 0.1999996,
+      "copper_edge_gap_mm": -0.12504014902532076,
+      "input_geometry_matches": true,
+      "input_obstacle_has_foreign_net33": false
+    },
+    {
+      "pad_id": "pcb_smtpad_50",
+      "via_center": {
+        "x": -3.971790984760862,
+        "y": -2.474471814874013
+      },
+      "pad_center": {
+        "x": -3.424936,
+        "y": -2.299975
+      },
+      "pad_width": 0.850011,
+      "pad_height": 0.1999996,
+      "copper_edge_gap_mm": -0.1571815762528291,
+      "input_geometry_matches": true,
+      "input_obstacle_has_foreign_net33": false
+    }
+  ],
+  "trace_centerline_crossings": [
+    {
+      "trace_ids": [
+        "source_net_34_0",
+        "source_net_31_0"
+      ],
+      "segment_indices": [
+        27,
+        103
+      ],
+      "layer": "bottom",
+      "crossing": {
+        "x": -4.077105893159043,
+        "y": -1.7860311482638043
+      },
+      "segment_A": [
+        {
+          "route_type": "wire",
+          "x": -4.848616352210913,
+          "y": -2.7420965413532326,
+          "width": 0.15,
+          "layer": "bottom"
+        },
+        {
+          "route_type": "wire",
+          "x": -3.9024030916670145,
+          "y": -1.5695372555075546,
+          "width": 0.15,
+          "layer": "bottom"
+        }
+      ],
+      "segment_B": [
+        {
+          "route_type": "wire",
+          "x": -4.337410499070251,
+          "y": -1.5704193832233433,
+          "width": 0.15,
+          "layer": "bottom"
+        },
+        {
+          "route_type": "wire",
+          "x": -3.855304865308629,
+          "y": -1.9697501836424136,
+          "width": 0.15,
+          "layer": "bottom"
+        }
+      ]
+    },
+    {
+      "trace_ids": [
+        "source_net_34_0",
+        "source_net_24_0"
+      ],
+      "segment_indices": [
+        173,
+        46
+      ],
+      "layer": "bottom",
+      "crossing": {
+        "x": -2.1757765960613504,
+        "y": -2.3589180427204663
+      },
+      "segment_A": [
+        {
+          "route_type": "wire",
+          "x": -2.521243700789588,
+          "y": -2.465892588993464,
+          "width": 0.15,
+          "layer": "bottom"
+        },
+        {
+          "route_type": "wire",
+          "x": -1.6034770899347228,
+          "y": -2.1817044117777553,
+          "width": 0.15,
+          "layer": "bottom"
+        }
+      ],
+      "segment_B": [
+        {
+          "route_type": "wire",
+          "x": -1.8584519177193648,
+          "y": -3.364056256111306,
+          "width": 0.15,
+          "layer": "bottom"
+        },
+        {
+          "route_type": "wire",
+          "x": -2.3663130227719362,
+          "y": -1.7553865287820716,
+          "width": 0.15,
+          "layer": "bottom"
+        }
+      ]
+    },
+    {
+      "trace_ids": [
+        "source_net_31_0",
+        "source_net_30_0"
+      ],
+      "segment_indices": [
+        3,
+        20
+      ],
+      "layer": "top",
+      "crossing": {
+        "x": -4.139768356074593,
+        "y": -1.0268224901400758
+      },
+      "segment_A": [
+        {
+          "route_type": "wire",
+          "x": -3.7900428979919925,
+          "y": -0.7663252852605823,
+          "width": 0.15,
+          "layer": "top"
+        },
+        {
+          "route_type": "wire",
+          "x": -4.929238640850782,
+          "y": -1.61486890702701,
+          "width": 0.15,
+          "layer": "top"
+        }
+      ],
+      "segment_B": [
+        {
+          "route_type": "wire",
+          "x": -4.020746088681234,
+          "y": -0.6679956679615321,
+          "width": 0.15,
+          "layer": "top"
+        },
+        {
+          "route_type": "wire",
+          "x": -4.334566736889533,
+          "y": -1.6140981779938497,
+          "width": 0.15,
+          "layer": "top"
+        }
+      ]
+    }
+  ],
+  "via_sizes": [
+    "(0.6, 0.3)"
+  ],
+  "wire_widths": [
+    0.15
+  ],
+  "captured_input_via_pad_drill_mm": [
+    0.6,
+    0.3
+  ],
+  "board_edge_violations": [
+    {
+      "trace_id": "source_net_32_0",
+      "point_index": 61,
+      "x": 8.680970288467575,
+      "y": 5.9034586625009435,
+      "copper_edge_to_board_mm": 0.1440297115324249
+    },
+    {
+      "trace_id": "source_net_32_0",
+      "point_index": 62,
+      "x": 8.680970288467575,
+      "y": -4.019029711532424,
+      "copper_edge_to_board_mm": 0.1440297115324249
+    },
+    {
+      "trace_id": "source_net_26_0",
+      "point_index": 45,
+      "x": 8.585195994010359,
+      "y": -3.363433662398861,
+      "copper_edge_to_board_mm": 0.2398040059896413
+    },
+    {
+      "trace_id": "source_net_26_0",
+      "point_index": 46,
+      "x": 8.635,
+      "y": -3.2697913001518155,
+      "copper_edge_to_board_mm": 0.19000000000000056
+    },
+    {
+      "trace_id": "source_net_26_0",
+      "point_index": 47,
+      "x": 8.635,
+      "y": 8.382750301183334,
+      "copper_edge_to_board_mm": 0.19000000000000056
+    },
+    {
+      "trace_id": "source_net_26_0",
+      "point_index": 50,
+      "x": 4.709371924337354,
+      "y": 10.229765878005146,
+      "copper_edge_to_board_mm": 0.19523412199485363
+    },
+    {
+      "trace_id": "source_net_26_0",
+      "point_index": 51,
+      "x": -4.72119335316722,
+      "y": 10.229765878005146,
+      "copper_edge_to_board_mm": 0.19523412199485363
+    },
+    {
+      "trace_id": "source_net_24_0",
+      "point_index": 200,
+      "x": -8.55833201293559,
+      "y": -0.830789925131451,
+      "copper_edge_to_board_mm": 0.2666679870644099
+    },
+    {
+      "trace_id": "source_net_24_0",
+      "point_index": 201,
+      "x": -8.561256564949408,
+      "y": -0.7445279516605707,
+      "copper_edge_to_board_mm": 0.263743435050592
+    },
+    {
+      "trace_id": "source_net_24_0",
+      "point_index": 202,
+      "x": -8.559858446185414,
+      "y": 6.689265457230432,
+      "copper_edge_to_board_mm": 0.2651415538145862
+    },
+    {
+      "trace_id": "source_net_22_0",
+      "point_index": 199,
+      "x": -8.57898753974097,
+      "y": -4.095083747150833,
+      "copper_edge_to_board_mm": 0.2460124602590305
+    },
+    {
+      "trace_id": "source_net_22_0",
+      "point_index": 200,
+      "x": -8.57898753974097,
+      "y": -5.887953024379928,
+      "copper_edge_to_board_mm": 0.2460124602590305
+    },
+    {
+      "trace_id": "source_net_20_0",
+      "point_index": 24,
+      "x": -8.635,
+      "y": 1.5486039887355147,
+      "copper_edge_to_board_mm": 0.19000000000000056
+    },
+    {
+      "trace_id": "source_net_20_0",
+      "point_index": 25,
+      "x": -8.599425795282569,
+      "y": 1.5130297840180837,
+      "copper_edge_to_board_mm": 0.22557420471743156
+    },
+    {
+      "trace_id": "source_net_20_0",
+      "point_index": 26,
+      "x": -8.599425795282569,
+      "y": -8.435729944481002,
+      "copper_edge_to_board_mm": 0.22557420471743156
+    },
+    {
+      "trace_id": "source_net_4_mst1_0",
+      "point_index": 1,
+      "x": 4.850001,
+      "y": -10.199999,
+      "copper_edge_to_board_mm": 0.22500099999999995
+    },
+    {
+      "trace_id": "source_net_4_mst1_0",
+      "point_index": 2,
+      "x": 4.536717282328845,
+      "y": -10.20099317614741,
+      "copper_edge_to_board_mm": 0.22400682385259002
+    },
+    {
+      "trace_id": "source_net_4_mst1_0",
+      "point_index": 4,
+      "x": 4.536717282328845,
+      "y": -10.20099317614741,
+      "copper_edge_to_board_mm": 0.22400682385259002
+    },
+    {
+      "trace_id": "source_net_4_mst1_0",
+      "point_index": 5,
+      "x": 4.177592342340942,
+      "y": -10.23607815675747,
+      "copper_edge_to_board_mm": 0.18892184324252986
+    },
+    {
+      "trace_id": "source_net_4_mst1_0",
+      "point_index": 6,
+      "x": 4.076023699104533,
+      "y": -10.23607815675747,
+      "copper_edge_to_board_mm": 0.18892184324252986
+    },
+    {
+      "trace_id": "source_net_4_mst1_0",
+      "point_index": 7,
+      "x": 3.979888861531996,
+      "y": -10.139943319184933,
+      "copper_edge_to_board_mm": 0.2850566808150667
+    },
+    {
+      "trace_id": "source_net_4_mst1_0",
+      "point_index": 8,
+      "x": 1.9021859940477372,
+      "y": -10.139943319184933,
+      "copper_edge_to_board_mm": 0.2850566808150667
+    },
+    {
+      "trace_id": "source_net_2_mst8_0",
+      "point_index": 8,
+      "x": 3.360078154170739,
+      "y": -10.26,
+      "copper_edge_to_board_mm": 0.1650000000000002
+    },
+    {
+      "trace_id": "source_net_2_mst8_0",
+      "point_index": 9,
+      "x": 3.207761684107724,
+      "y": -10.26,
+      "copper_edge_to_board_mm": 0.1650000000000002
+    },
+    {
+      "trace_id": "source_net_2_mst8_0",
+      "point_index": 10,
+      "x": 1.2500000000000004,
+      "y": -10.26,
+      "copper_edge_to_board_mm": 0.1650000000000002
+    },
+    {
+      "trace_id": "source_net_2_mst23_0",
+      "point_index": 29,
+      "x": 3.3222394066549206,
+      "y": -10.260928703657846,
+      "copper_edge_to_board_mm": 0.1640712963421535
+    },
+    {
+      "trace_id": "source_net_2_mst23_0",
+      "point_index": 30,
+      "x": -3.488022624157998,
+      "y": -10.257590542785769,
+      "copper_edge_to_board_mm": 0.16740945721423123
+    }
+  ]
+}

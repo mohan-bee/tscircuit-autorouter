@@ -1,0 +1,61 @@
+{
+  "status": "failed autoroute, not manufacturing output",
+  "drc_record_counts": {
+    "pcb_trace_error": 147,
+    "pcb_pad_trace_clearance_error": 11,
+    "pcb_via_trace_clearance_error": 72,
+    "pcb_pad_pad_clearance_error": 49,
+    "pcb_via_clearance_error": 15,
+    "pcb_placement_error": 1
+  },
+  "drc_record_total": 295,
+  "pcb_trace_count": 106,
+  "pcb_via_count": 108,
+  "wire_widths_mm": [
+    0.15
+  ],
+  "via_pad_drill_sizes_mm": [
+    [
+      0.6,
+      0.3
+    ]
+  ],
+  "via_edge_example": {
+    "id": "pcb_via_72",
+    "net": "SYS5V",
+    "center_mm": [
+      4.536717282328845,
+      -10.20099317614741
+    ],
+    "copper_edge_to_board_edge_mm": -0.0009931761474099576,
+    "required_mm": 0.3
+  },
+  "different_net_via_example": {
+    "ids": [
+      "pcb_via_3",
+      "pcb_via_12"
+    ],
+    "nets": [
+      "D10_MOSI",
+      "D6_TX"
+    ],
+    "copper_edge_gap_mm": -0.12370192225676235,
+    "required_mm": 0.1
+  },
+  "minimum_trace_copper_edge_clearance_to_board": {
+    "mm": 0.1440297115324249,
+    "trace_id": "source_net_32_0",
+    "point_mm": [
+      8.680970288467575,
+      -4.019029711532424
+    ],
+    "required_mm": 0.3
+  },
+  "swclk_visual_quality_example": {
+    "trace_id": "source_net_22_0",
+    "planar_route_length_mm": 40.59405738291247,
+    "endpoint_distance_mm": 2.629725300097522,
+    "wire_point_count": 205,
+    "interpretation": "detour observation; not by itself proof of a solver defect"
+  }
+}

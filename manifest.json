@@ -1,0 +1,40 @@
+{
+  "description": "Preserved rejected two-layer RP2040 route; not fabrication output",
+  "observed_on": "2026-10-22",
+  "versions": {
+    "tscircuit": "0.0.3003",
+    "@tscircuit/cli": "0.1.2400",
+    "@tscircuit/core_installed_metadata": "0.0.2196",
+    "@tscircuit/core_routing_cache_key": "0.0.2195",
+    "@tscircuit/capacity-autorouter": "0.0.999"
+  },
+  "drc_error_record_counts": {
+    "pcb_trace_error": 147,
+    "pcb_pad_trace_clearance_error": 11,
+    "pcb_via_trace_clearance_error": 72,
+    "pcb_pad_pad_clearance_error": 49,
+    "pcb_via_clearance_error": 15,
+    "pcb_placement_error": 1
+  },
+  "drc_error_record_total": 295,
+  "bitmap_short_detections": 163,
+  "sha256": {
+    "input.simple-route.json": "445e758523dd24f20db56bc8e405b18feadf82f17b92fd4d83bd1075ca53e706",
+    "board.circuit.json": "c1fa434ccb605223315630d140dbabe68e3b706514e111b129b06c6209ab5b21",
+    "input.circuit.tsx": "626371bceda3791b8a2295e3a9417b613f24258e856ae2f2f391aa0894eac0a8",
+    "components.tsx": "5cecba33943012d452a48b2cafc72b2a081c7dd90e2284f87188f343defb4aef",
+    "package.json": "e8d7980cd3c11401af643b2850d2699b0fc3a9b8e187cc5eacaf5c0b8ae5744f",
+    "tsconfig.json": "5e505ebde6ce2eae019fb837e7a5f599588d7100138647b59b2c2fe0a53a7976",
+    "route.log": "d99068aaf004508985bca5f6c77ea54fc22c4e10a38e52891455feb8280713a1",
+    "time.json": "1c5cd777ebb5643231f4109fc10a5d757440eb5cf9f019784cc4315f710487ea",
+    "shorts.log": "13a0f0ced66f42bc14dd3ce5e80d5e72684830736696b1ce08900b78bbd838a2",
+    "routing-audit.json": "7405e3cba3918333beaf9a550744a88ef7eafd5ad65961dd0691ee0e68892544",
+    "independent-audit.md": "79f271f225f0d04d36d4c810339b2afa8906508c7eb2a25fbee8d8697ed886c9",
+    "independent-geometry-audit.json": "f81c546aba3f6d5ad0718848aeed7125c203b4fa7c7409977556b42f6b6ad983",
+    "pcb.png": "b77deb565c8e4ac4e847b9575e431fda7b4c49b8f091a247949992324310cf40",
+    "pcb.svg": "dc89117cd56b43c6a928e28990254b347b76a63a858c8229cbb655201929cec8",
+    "via-edge-crop.png": "b80f99ff44ab0483a186f19a7df9527a5c7640e81e7a0c481ca186a44148623e",
+    "different-net-vias-crop.png": "d5053fca42c5e0f9ad4bc979cb3d1af1ac150547d1c4e221df9395d68dedd020",
+    "mcu-routing-crop.png": "c501e887ed1f838dc895ff2c786988dadc1b32b55b712a72aace29ac96bd8f49"
+  }
+}

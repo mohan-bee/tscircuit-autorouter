@@ -1,0 +1,492 @@
+Detected 163 shorts in circuit.json
+1. top/gerber short at x=-3.194mm y=3.401mm
+   J1.VBUS1, J1.VBUS2, source_net_3_mst0_0, source_net_3_mst1_0, source_net_3_mst2_0, pcb_via_77, pcb_via_78, pcb_via_79, pcb_via_80 <-> U1.GND, U1.TESTEN, U3.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, J1.GND1, J1.GND2, pcb_plated_hole_12, Y1.pin2, Y1.pin4, C1.pin2, C2.pin2, C5.pin2, C6.pin2, C7.pin2, C12.pin2, C13.pin2, C15.pin2, C17.pin2, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst2_0, source_net_2_mst3_0, source_net_2_mst4_0, source_net_2_mst5_0, source_net_2_mst6_0, source_net_2_mst8_0, source_net_2_mst11_0, source_net_2_mst12_0, source_net_2_mst13_0, source_net_2_mst15_0, source_net_2_mst16_0, source_net_2_mst17_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst20_0, source_net_2_mst23_0, source_net_2_mst25_0, source_net_2_mst26_0, source_net_2_mst28_0, source_net_2_mst29_0, source_net_2_mst30_0, source_net_2_mst33_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=117
+2. top/gerber short at x=-1.874mm y=2.507mm
+   U1.QSPI_SD2, source_net_18_0, pcb_via_46 <-> U1.QSPI_SS, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=115
+3. top/gerber short at x=-4.036mm y=-2.639mm
+   U1.GPIO4, pcb_plated_hole_15, source_net_33_0, pcb_via_5, pcb_via_6 <-> U1.GPIO6, pcb_plated_hole_8, source_net_28_0, pcb_via_15, pcb_via_16
+   pixels=105
+4. top/gerber short at x=3.171mm y=-2.683mm
+   U1.GPIO23 <-> U1.DVDD1, U1.VREG_VOUT, U1.DVDD2, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101
+   pixels=105
+5. top/gerber short at x=-4.363mm y=-0.129mm
+   U1.GPIO26_ADC0, pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32 <-> U1.QSPI_SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51
+   pixels=90
+6. top/gerber short at x=-4.682mm y=-1.318mm
+   U1.GPIO1, pcb_plated_hole_17, source_net_31_0, pcb_via_9, pcb_via_10, pcb_via_11 <-> U1.GPIO26_ADC0, pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32
+   pixels=89
+7. top/gerber short at x=-2.056mm y=0.306mm
+   U1.QSPI_SD0, source_net_16_0, pcb_via_48 <-> U1.QSPI_SS, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=85
+8. top/gerber short at x=-2.546mm y=-0.154mm
+   U1.QSPI_SD0, source_net_16_0, pcb_via_48 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=85
+9. top/gerber short at x=-1.803mm y=1.402mm
+   U1.QSPI_SD3, source_net_19_0, pcb_via_43, pcb_via_44, pcb_via_45 <-> U1.QSPI_SD2, source_net_18_0, pcb_via_46
+   pixels=79
+10. top/gerber short at x=-1.966mm y=-0.811mm
+   U1.GPIO27_ADC1, pcb_plated_hole_5, source_net_25_0, pcb_via_20, pcb_via_21, pcb_via_22, pcb_via_23, pcb_via_24, pcb_via_25, pcb_via_26, pcb_via_27 <-> U1.QSPI_SS, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=73
+11. top/gerber short at x=-4.606mm y=-1.913mm
+   U1.GPIO2, pcb_plated_hole_16, source_net_32_0, pcb_via_7, pcb_via_8 <-> U1.GPIO0, pcb_plated_hole_10, source_net_30_0, pcb_via_12, pcb_via_13
+   pixels=71
+12. top/gerber short at x=0.123mm y=-3.965mm
+   U1.GPIO27_ADC1, pcb_plated_hole_5, source_net_25_0, pcb_via_20, pcb_via_21, pcb_via_22, pcb_via_23, pcb_via_24, pcb_via_25, pcb_via_26, pcb_via_27 <-> U1.GND, U1.TESTEN, U3.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, J1.GND1, J1.GND2, pcb_plated_hole_12, Y1.pin2, Y1.pin4, C1.pin2, C2.pin2, C5.pin2, C6.pin2, C7.pin2, C12.pin2, C13.pin2, C15.pin2, C17.pin2, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst2_0, source_net_2_mst3_0, source_net_2_mst4_0, source_net_2_mst5_0, source_net_2_mst6_0, source_net_2_mst8_0, source_net_2_mst11_0, source_net_2_mst12_0, source_net_2_mst13_0, source_net_2_mst15_0, source_net_2_mst16_0, source_net_2_mst17_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst20_0, source_net_2_mst23_0, source_net_2_mst25_0, source_net_2_mst26_0, source_net_2_mst28_0, source_net_2_mst29_0, source_net_2_mst30_0, source_net_2_mst33_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=71
+13. top/gerber short at x=-2.245mm y=1.356mm
+   U1.QSPI_SD3, source_net_19_0, pcb_via_43, pcb_via_44, pcb_via_45 <-> U1.QSPI_SD1, source_net_17_0, pcb_via_47
+   pixels=70
+14. top/gerber short at x=1.269mm y=0.050mm
+   U1.GPIO29_ADC3, pcb_plated_hole_7, source_net_27_0, pcb_via_17 <-> U1.DVDD1, U1.VREG_VOUT, U1.DVDD2, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101
+   pixels=61
+15. top/gerber short at x=-5.529mm y=0.330mm
+   U1.GND, U1.TESTEN, U3.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, J1.GND1, J1.GND2, pcb_plated_hole_12, Y1.pin2, Y1.pin4, C1.pin2, C2.pin2, C5.pin2, C6.pin2, C7.pin2, C12.pin2, C13.pin2, C15.pin2, C17.pin2, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst2_0, source_net_2_mst3_0, source_net_2_mst4_0, source_net_2_mst5_0, source_net_2_mst6_0, source_net_2_mst8_0, source_net_2_mst11_0, source_net_2_mst12_0, source_net_2_mst13_0, source_net_2_mst15_0, source_net_2_mst16_0, source_net_2_mst17_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst20_0, source_net_2_mst23_0, source_net_2_mst25_0, source_net_2_mst26_0, source_net_2_mst28_0, source_net_2_mst29_0, source_net_2_mst30_0, source_net_2_mst33_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=57
+16. top/gerber short at x=-1.511mm y=-1.478mm
+   U1.GPIO29_ADC3, pcb_plated_hole_7, source_net_27_0, pcb_via_17 <-> U1.GND, U1.TESTEN, U3.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, J1.GND1, J1.GND2, pcb_plated_hole_12, Y1.pin2, Y1.pin4, C1.pin2, C2.pin2, C5.pin2, C6.pin2, C7.pin2, C12.pin2, C13.pin2, C15.pin2, C17.pin2, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst2_0, source_net_2_mst3_0, source_net_2_mst4_0, source_net_2_mst5_0, source_net_2_mst6_0, source_net_2_mst8_0, source_net_2_mst11_0, source_net_2_mst12_0, source_net_2_mst13_0, source_net_2_mst15_0, source_net_2_mst16_0, source_net_2_mst17_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst20_0, source_net_2_mst23_0, source_net_2_mst25_0, source_net_2_mst26_0, source_net_2_mst28_0, source_net_2_mst29_0, source_net_2_mst30_0, source_net_2_mst33_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=54
+17. top/gerber short at x=-4.159mm y=-1.013mm
+   U1.GPIO1, pcb_plated_hole_17, source_net_31_0, pcb_via_9, pcb_via_10, pcb_via_11 <-> U1.GPIO0, pcb_plated_hole_10, source_net_30_0, pcb_via_12, pcb_via_13
+   pixels=51
+18. top/gerber short at x=-6.367mm y=-1.958mm
+   U1.GPIO2, pcb_plated_hole_16, source_net_32_0, pcb_via_7, pcb_via_8 <-> U1.GPIO26_ADC0, pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32
+   pixels=50
+19. top/gerber short at x=-3.291mm y=3.262mm
+   U1.QSPI_SS, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56 <-> U1.GND, U1.TESTEN, U3.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, J1.GND1, J1.GND2, pcb_plated_hole_12, Y1.pin2, Y1.pin4, C1.pin2, C2.pin2, C5.pin2, C6.pin2, C7.pin2, C12.pin2, C13.pin2, C15.pin2, C17.pin2, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst2_0, source_net_2_mst3_0, source_net_2_mst4_0, source_net_2_mst5_0, source_net_2_mst6_0, source_net_2_mst8_0, source_net_2_mst11_0, source_net_2_mst12_0, source_net_2_mst13_0, source_net_2_mst15_0, source_net_2_mst16_0, source_net_2_mst17_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst20_0, source_net_2_mst23_0, source_net_2_mst25_0, source_net_2_mst26_0, source_net_2_mst28_0, source_net_2_mst29_0, source_net_2_mst30_0, source_net_2_mst33_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=47
+20. top/gerber short at x=-5.677mm y=-0.492mm
+   U1.GPIO26_ADC0, pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32 <-> U1.SWCLK, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38
+   pixels=46
+21. top/gerber short at x=0.074mm y=1.971mm
+   U1.USB_DM, R3.pin2, source_net_7_0 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=45
+22. top/gerber short at x=-1.219mm y=2.102mm
+   U1.QSPI_SD1, source_net_17_0, pcb_via_47 <-> J1.DM2, J1.DM1, R3.pin1, source_net_5_mst0_0, source_net_5_mst1_0, pcb_via_69, pcb_via_70, pcb_via_71
+   pixels=43
+23. top/gerber short at x=-5.090mm y=-2.589mm
+   U1.GPIO3, pcb_plated_hole_14, source_net_34_0, pcb_via_3, pcb_via_4 <-> U1.GPIO0, pcb_plated_hole_10, source_net_30_0, pcb_via_12, pcb_via_13
+   pixels=42
+24. top/gerber short at x=-3.925mm y=-3.448mm
+   U1.GPIO7, pcb_plated_hole_9, source_net_29_0, pcb_via_14 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=39
+25. top/gerber short at x=-3.820mm y=-2.324mm
+   U1.GPIO5 <-> U1.GPIO4, pcb_plated_hole_15, source_net_33_0, pcb_via_5, pcb_via_6
+   pixels=36
+26. top/gerber short at x=2.655mm y=-7.725mm
+   U3.NC <-> Y1.pin3, C13.pin1, source_net_13_mst0_0, source_net_13_mst1_0, pcb_via_57
+   pixels=36
+27. top/gerber short at x=-0.262mm y=3.272mm
+   J1.DP1, J1.DP2, R4.pin1, source_net_6_mst0_0, source_net_6_mst1_0, pcb_via_67, pcb_via_68 <-> J1.DM2, J1.DM1, R3.pin1, source_net_5_mst0_0, source_net_5_mst1_0, pcb_via_69, pcb_via_70, pcb_via_71
+   pixels=36
+28. top/gerber short at x=3.139mm y=-3.013mm
+   U1.GPIO22 <-> U1.DVDD1, U1.VREG_VOUT, U1.DVDD2, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101
+   pixels=35
+29. top/gerber short at x=-5.088mm y=-0.104mm
+   U1.SWCLK, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=35
+30. top/gerber short at x=5.997mm y=-2.361mm
+   U1.RUN, source_net_21_mst0_0, source_net_21_mst1_0, pcb_via_39, pcb_via_40 <-> U3.VIN, U3.EN, pcb_plated_hole_11, C17.pin1, source_net_4_mst0_0, source_net_4_mst1_0, source_net_4_mst3_0, pcb_via_72, pcb_via_73, pcb_via_74, pcb_via_75, pcb_via_76
+   pixels=34
+31. top/gerber short at x=2.738mm y=-3.214mm
+   U1.DVDD1, U1.VREG_VOUT, U1.DVDD2, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=34
+32. top/gerber short at x=-0.457mm y=-0.247mm
+   U1.GPIO29_ADC3, pcb_plated_hole_7, source_net_27_0, pcb_via_17 <-> U1.SWCLK, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38
+   pixels=33
+33. top/gerber short at x=-5.219mm y=-1.577mm
+   U1.GPIO1, pcb_plated_hole_17, source_net_31_0, pcb_via_9, pcb_via_10, pcb_via_11 <-> U1.SWCLK, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38
+   pixels=33
+34. top/gerber short at x=-3.412mm y=3.258mm
+   U1.QSPI_SS, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56 <-> J1.VBUS1, J1.VBUS2, source_net_3_mst0_0, source_net_3_mst1_0, source_net_3_mst2_0, pcb_via_77, pcb_via_78, pcb_via_79, pcb_via_80
+   pixels=33
+35. top/gerber short at x=-3.967mm y=0.384mm
+   U1.QSPI_SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=33
+36. top/gerber short at x=-5.424mm y=-0.004mm
+   U1.SWCLK, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=33
+37. top/gerber short at x=-5.767mm y=-3.229mm
+   U1.GPIO0, pcb_plated_hole_10, source_net_30_0, pcb_via_12, pcb_via_13 <-> U1.GND, U1.TESTEN, U3.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, J1.GND1, J1.GND2, pcb_plated_hole_12, Y1.pin2, Y1.pin4, C1.pin2, C2.pin2, C5.pin2, C6.pin2, C7.pin2, C12.pin2, C13.pin2, C15.pin2, C17.pin2, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst2_0, source_net_2_mst3_0, source_net_2_mst4_0, source_net_2_mst5_0, source_net_2_mst6_0, source_net_2_mst8_0, source_net_2_mst11_0, source_net_2_mst12_0, source_net_2_mst13_0, source_net_2_mst15_0, source_net_2_mst16_0, source_net_2_mst17_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst20_0, source_net_2_mst23_0, source_net_2_mst25_0, source_net_2_mst26_0, source_net_2_mst28_0, source_net_2_mst29_0, source_net_2_mst30_0, source_net_2_mst33_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=32
+38. top/gerber short at x=-2.949mm y=-0.315mm
+   U1.QSPI_SD0, source_net_16_0, pcb_via_48 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=32
+39. top/gerber short at x=-4.108mm y=-2.956mm
+   U1.GPIO7, pcb_plated_hole_9, source_net_29_0, pcb_via_14 <-> U1.GPIO6, pcb_plated_hole_8, source_net_28_0, pcb_via_15, pcb_via_16
+   pixels=31
+40. top/gerber short at x=-1.887mm y=1.981mm
+   U1.QSPI_SD2, source_net_18_0, pcb_via_46 <-> U1.QSPI_SD1, source_net_17_0, pcb_via_47
+   pixels=31
+41. top/gerber short at x=-3.067mm y=-0.259mm
+   U1.GPIO0, pcb_plated_hole_10, source_net_30_0, pcb_via_12, pcb_via_13 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=31
+42. top/gerber short at x=-3.069mm y=-1.105mm
+   U1.GPIO2, pcb_plated_hole_16, source_net_32_0, pcb_via_7, pcb_via_8 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=30
+43. top/gerber short at x=1.232mm y=3.216mm
+   J1.CC1, source_net_9_0, pcb_via_62 <-> J1.DP1, J1.DP2, R4.pin1, source_net_6_mst0_0, source_net_6_mst1_0, pcb_via_67, pcb_via_68
+   pixels=29
+44. top/gerber short at x=-1.201mm y=-0.106mm
+   U1.QSPI_SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51 <-> U1.QSPI_SS, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=28
+45. top/gerber short at x=5.721mm y=-1.648mm
+   U3.VIN, U3.EN, pcb_plated_hole_11, C17.pin1, source_net_4_mst0_0, source_net_4_mst1_0, source_net_4_mst3_0, pcb_via_72, pcb_via_73, pcb_via_74, pcb_via_75, pcb_via_76 <-> U1.GND, U1.TESTEN, U3.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, J1.GND1, J1.GND2, pcb_plated_hole_12, Y1.pin2, Y1.pin4, C1.pin2, C2.pin2, C5.pin2, C6.pin2, C7.pin2, C12.pin2, C13.pin2, C15.pin2, C17.pin2, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst2_0, source_net_2_mst3_0, source_net_2_mst4_0, source_net_2_mst5_0, source_net_2_mst6_0, source_net_2_mst8_0, source_net_2_mst11_0, source_net_2_mst12_0, source_net_2_mst13_0, source_net_2_mst15_0, source_net_2_mst16_0, source_net_2_mst17_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst20_0, source_net_2_mst23_0, source_net_2_mst25_0, source_net_2_mst26_0, source_net_2_mst28_0, source_net_2_mst29_0, source_net_2_mst30_0, source_net_2_mst33_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=27
+46. top/gerber short at x=-0.932mm y=0.176mm
+   U1.SWCLK, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U1.QSPI_SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51
+   pixels=25
+47. top/gerber short at x=5.784mm y=-3.275mm
+   U1.RUN, source_net_21_mst0_0, source_net_21_mst1_0, pcb_via_39, pcb_via_40 <-> U1.GND, U1.TESTEN, U3.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, J1.GND1, J1.GND2, pcb_plated_hole_12, Y1.pin2, Y1.pin4, C1.pin2, C2.pin2, C5.pin2, C6.pin2, C7.pin2, C12.pin2, C13.pin2, C15.pin2, C17.pin2, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst2_0, source_net_2_mst3_0, source_net_2_mst4_0, source_net_2_mst5_0, source_net_2_mst6_0, source_net_2_mst8_0, source_net_2_mst11_0, source_net_2_mst12_0, source_net_2_mst13_0, source_net_2_mst15_0, source_net_2_mst16_0, source_net_2_mst17_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst20_0, source_net_2_mst23_0, source_net_2_mst25_0, source_net_2_mst26_0, source_net_2_mst28_0, source_net_2_mst29_0, source_net_2_mst30_0, source_net_2_mst33_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=24
+48. top/gerber short at x=-3.048mm y=-1.438mm
+   U1.GPIO3, pcb_plated_hole_14, source_net_34_0, pcb_via_3, pcb_via_4 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=24
+49. top/gerber short at x=1.349mm y=1.973mm
+   J1.DP1, J1.DP2, R4.pin1, source_net_6_mst0_0, source_net_6_mst1_0, pcb_via_67, pcb_via_68 <-> U1.DVDD1, U1.VREG_VOUT, U1.DVDD2, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101
+   pixels=21
+50. top/gerber short at x=-6.971mm y=-0.217mm
+   U1.GPIO2, pcb_plated_hole_16, source_net_32_0, pcb_via_7, pcb_via_8 <-> U1.GPIO29_ADC3, pcb_plated_hole_7, source_net_27_0, pcb_via_17
+   pixels=19
+51. top/gerber short at x=-3.764mm y=1.853mm
+   U1.GPIO27_ADC1, pcb_plated_hole_5, source_net_25_0, pcb_via_20, pcb_via_21, pcb_via_22, pcb_via_23, pcb_via_24, pcb_via_25, pcb_via_26, pcb_via_27 <-> U1.QSPI_SD3, source_net_19_0, pcb_via_43, pcb_via_44, pcb_via_45
+   pixels=19
+52. top/gerber short at x=0.988mm y=2.790mm
+   J1.DP1, J1.DP2, R4.pin1, source_net_6_mst0_0, source_net_6_mst1_0, pcb_via_67, pcb_via_68 <-> U1.DVDD1, U1.VREG_VOUT, U1.DVDD2, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101
+   pixels=18
+53. top/gerber short at x=2.384mm y=-7.092mm
+   U1.SWD, source_net_23_0, pcb_via_33 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=16
+54. top/gerber short at x=-4.465mm y=-2.072mm
+   U1.GPIO3, pcb_plated_hole_14, source_net_34_0, pcb_via_3, pcb_via_4 <-> U1.GPIO2, pcb_plated_hole_16, source_net_32_0, pcb_via_7, pcb_via_8
+   pixels=15
+55. top/gerber short at x=-4.369mm y=0.327mm
+   U1.GND, U1.TESTEN, U3.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, J1.GND1, J1.GND2, pcb_plated_hole_12, Y1.pin2, Y1.pin4, C1.pin2, C2.pin2, C5.pin2, C6.pin2, C7.pin2, C12.pin2, C13.pin2, C15.pin2, C17.pin2, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst2_0, source_net_2_mst3_0, source_net_2_mst4_0, source_net_2_mst5_0, source_net_2_mst6_0, source_net_2_mst8_0, source_net_2_mst11_0, source_net_2_mst12_0, source_net_2_mst13_0, source_net_2_mst15_0, source_net_2_mst16_0, source_net_2_mst17_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst20_0, source_net_2_mst23_0, source_net_2_mst25_0, source_net_2_mst26_0, source_net_2_mst28_0, source_net_2_mst29_0, source_net_2_mst30_0, source_net_2_mst33_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=15
+56. top/gerber short at x=-1.474mm y=0.151mm
+   U1.QSPI_SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51 <-> U1.QSPI_SS, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=13
+57. top/gerber short at x=1.286mm y=1.015mm
+   U1.USB_DM, R3.pin2, source_net_7_0 <-> U1.USB_DP, R4.pin2, source_net_8_0, pcb_via_63, pcb_via_64, pcb_via_65, pcb_via_66
+   pixels=12
+58. top/gerber short at x=-2.231mm y=-0.391mm
+   U1.GPIO27_ADC1, pcb_plated_hole_5, source_net_25_0, pcb_via_20, pcb_via_21, pcb_via_22, pcb_via_23, pcb_via_24, pcb_via_25, pcb_via_26, pcb_via_27 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=12
+59. top/gerber short at x=0.739mm y=5.075mm
+   J1.DP1, J1.DP2, R4.pin1, source_net_6_mst0_0, source_net_6_mst1_0, pcb_via_67, pcb_via_68 <-> J1.DM2, J1.DM1, R3.pin1, source_net_5_mst0_0, source_net_5_mst1_0, pcb_via_69, pcb_via_70, pcb_via_71
+   pixels=8
+60. top/gerber short at x=1.103mm y=1.531mm
+   U1.USB_DM, R3.pin2, source_net_7_0 <-> U1.DVDD1, U1.VREG_VOUT, U1.DVDD2, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101
+   pixels=8
+61. top/gerber short at x=-3.798mm y=1.670mm
+   U1.GPIO27_ADC1, pcb_plated_hole_5, source_net_25_0, pcb_via_20, pcb_via_21, pcb_via_22, pcb_via_23, pcb_via_24, pcb_via_25, pcb_via_26, pcb_via_27 <-> U1.QSPI_SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51
+   pixels=7
+62. top/gerber short at x=-0.658mm y=-5.110mm
+   U1.XOUT, source_net_12_0, pcb_via_58 <-> U1.XIN, Y1.pin1, C12.pin1, source_net_11_mst0_0, source_net_11_mst1_0, pcb_via_59, pcb_via_60
+   pixels=7
+63. top/gerber short at x=-1.738mm y=0.502mm
+   U1.QSPI_SD2, source_net_18_0, pcb_via_46 <-> U1.QSPI_SD0, source_net_16_0, pcb_via_48
+   pixels=6
+64. top/gerber short at x=-3.004mm y=-0.216mm
+   U1.GPIO0, pcb_plated_hole_10, source_net_30_0, pcb_via_12, pcb_via_13 <-> U1.QSPI_SD0, source_net_16_0, pcb_via_48
+   pixels=6
+65. top/gerber short at x=-1.534mm y=-0.968mm
+   U1.GPIO29_ADC3, pcb_plated_hole_7, source_net_27_0, pcb_via_17 <-> U1.GND, U1.TESTEN, U3.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, J1.GND1, J1.GND2, pcb_plated_hole_12, Y1.pin2, Y1.pin4, C1.pin2, C2.pin2, C5.pin2, C6.pin2, C7.pin2, C12.pin2, C13.pin2, C15.pin2, C17.pin2, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst2_0, source_net_2_mst3_0, source_net_2_mst4_0, source_net_2_mst5_0, source_net_2_mst6_0, source_net_2_mst8_0, source_net_2_mst11_0, source_net_2_mst12_0, source_net_2_mst13_0, source_net_2_mst15_0, source_net_2_mst16_0, source_net_2_mst17_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst20_0, source_net_2_mst23_0, source_net_2_mst25_0, source_net_2_mst26_0, source_net_2_mst28_0, source_net_2_mst29_0, source_net_2_mst30_0, source_net_2_mst33_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=6
+66. top/gerber short at x=3.080mm y=-9.030mm
+   U1.GPIO1, pcb_plated_hole_17, source_net_31_0, pcb_via_9, pcb_via_10, pcb_via_11 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=6
+67. top/gerber short at x=-0.613mm y=0.525mm
+   U1.SWCLK, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U1.QSPI_SD3, source_net_19_0, pcb_via_43, pcb_via_44, pcb_via_45
+   pixels=5
+68. top/gerber short at x=0.683mm y=1.033mm
+   U1.USB_DP, R4.pin2, source_net_8_0, pcb_via_63, pcb_via_64, pcb_via_65, pcb_via_66 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=4
+69. top/gerber short at x=-3.973mm y=-0.350mm
+   U1.GPIO0, pcb_plated_hole_10, source_net_30_0, pcb_via_12, pcb_via_13 <-> U1.GPIO26_ADC0, pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32
+   pixels=3
+70. top/gerber short at x=-4.416mm y=-0.560mm
+   U1.GPIO26_ADC0, pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32 <-> U1.QSPI_SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51
+   pixels=3
+71. top/gerber short at x=1.068mm y=1.318mm
+   U1.USB_DM, R3.pin2, source_net_7_0 <-> U1.USB_DP, R4.pin2, source_net_8_0, pcb_via_63, pcb_via_64, pcb_via_65, pcb_via_66
+   pixels=3
+72. top/gerber short at x=-2.853mm y=-1.540mm
+   U1.QSPI_SS, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=3
+73. top/gerber short at x=-4.235mm y=-1.768mm
+   U1.GPIO3, pcb_plated_hole_14, source_net_34_0, pcb_via_3, pcb_via_4 <-> U1.GPIO2, pcb_plated_hole_16, source_net_32_0, pcb_via_7, pcb_via_8
+   pixels=2
+74. top/gerber short at x=-3.902mm y=-0.192mm
+   U1.GPIO0, pcb_plated_hole_10, source_net_30_0, pcb_via_12, pcb_via_13 <-> U1.GPIO26_ADC0, pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32
+   pixels=2
+75. top/gerber short at x=0.403mm y=4.078mm
+   J1.DP1, J1.DP2, R4.pin1, source_net_6_mst0_0, source_net_6_mst1_0, pcb_via_67, pcb_via_68 <-> J1.DM2, J1.DM1, R3.pin1, source_net_5_mst0_0, source_net_5_mst1_0, pcb_via_69, pcb_via_70, pcb_via_71
+   pixels=2
+76. top/gerber short at x=-3.027mm y=0.053mm
+   U1.QSPI_SD0, source_net_16_0, pcb_via_48 <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=2
+77. top/gerber short at x=-4.987mm y=-1.890mm
+   U1.GPIO2, pcb_plated_hole_16, source_net_32_0, pcb_via_7, pcb_via_8 <-> U1.GPIO1, pcb_plated_hole_17, source_net_31_0, pcb_via_9, pcb_via_10, pcb_via_11
+   pixels=1
+78. top/gerber short at x=-4.147mm y=-1.190mm
+   U1.GPIO2, pcb_plated_hole_16, source_net_32_0, pcb_via_7, pcb_via_8 <-> U1.GPIO0, pcb_plated_hole_10, source_net_30_0, pcb_via_12, pcb_via_13
+   pixels=1
+79. top/gerber short at x=-5.057mm y=-2.100mm
+   U1.GPIO2, pcb_plated_hole_16, source_net_32_0, pcb_via_7, pcb_via_8 <-> U1.GPIO0, pcb_plated_hole_10, source_net_30_0, pcb_via_12, pcb_via_13
+   pixels=1
+80. top/gerber short at x=-2.082mm y=-1.400mm
+   U1.GPIO29_ADC3, pcb_plated_hole_7, source_net_27_0, pcb_via_17 <-> U1.GPIO27_ADC1, pcb_plated_hole_5, source_net_25_0, pcb_via_20, pcb_via_21, pcb_via_22, pcb_via_23, pcb_via_24, pcb_via_25, pcb_via_26, pcb_via_27
+   pixels=1
+81. top/gerber short at x=2.503mm y=-7.105mm
+   U3.NC <-> U1.IOVDD1, U1.USB_VDD, U1.VREG_IN, U1.ADC_AVDD, U1.IOVDD2, U1.IOVDD3, U1.IOVDD4, U1.IOVDD5, U1.IOVDD6, U3.VOUT, pcb_plated_hole_13, C1.pin1, C2.pin1, C5.pin1, C6.pin1, C7.pin1, C15.pin1, source_net_0_mst0_0, source_net_0_mst1_0, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst4_0, source_net_0_mst5_0, source_net_0_mst6_0, source_net_0_mst7_0, source_net_0_mst8_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst11_0, source_net_0_mst13_0, source_net_0_mst14_0, source_net_0_mst16_0, source_net_0_mst17_0, source_net_0_mst20_0, source_net_0_mst21_0, source_net_0_mst22_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=1
+82. bottom/gerber short at x=-2.413mm y=1.991mm
+   U2.EP <-> U2.N_HOLD, source_net_19_0, pcb_via_43, pcb_via_44, pcb_via_45
+   pixels=193
+83. bottom/gerber short at x=-4.837mm y=-0.998mm
+   pcb_plated_hole_7, source_net_27_0, pcb_via_17 <-> pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32
+   pixels=94
+84. bottom/gerber short at x=-1.604mm y=-0.026mm
+   TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51
+   pixels=90
+85. bottom/gerber short at x=-2.546mm y=-0.151mm
+   U2.SI, source_net_16_0, pcb_via_48 <-> U2.VCC, pcb_plated_hole_13, R5.pin1, R6.pin1, C3.pin1, C4.pin1, C9.pin1, C16.pin1, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst12_0, source_net_0_mst14_0, source_net_0_mst15_0, source_net_0_mst17_0, source_net_0_mst18_0, source_net_0_mst19_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=86
+86. bottom/gerber short at x=-2.397mm y=0.187mm
+   TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U2.VCC, pcb_plated_hole_13, R5.pin1, R6.pin1, C3.pin1, C4.pin1, C9.pin1, C16.pin1, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst12_0, source_net_0_mst14_0, source_net_0_mst15_0, source_net_0_mst17_0, source_net_0_mst18_0, source_net_0_mst19_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=81
+87. bottom/gerber short at x=-2.685mm y=-0.116mm
+   U2.SI, source_net_16_0, pcb_via_48 <-> U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51
+   pixels=80
+88. bottom/gerber short at x=-0.906mm y=0.368mm
+   TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U2.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, pcb_plated_hole_12, SW1.pin2, SW1.pin2_internal_1, SW2.pin2, SW2.pin2_internal_1, R1.pin2, R2.pin2, C3.pin2, C4.pin2, C8.pin2, C9.pin2, C10.pin2, C11.pin2, C14.pin2, C16.pin2, TP3.pin1, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst4_0, source_net_2_mst7_0, source_net_2_mst8_0, source_net_2_mst9_0, source_net_2_mst10_0, source_net_2_mst11_0, source_net_2_mst13_0, source_net_2_mst14_0, source_net_2_mst16_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst21_0, source_net_2_mst22_0, source_net_2_mst23_0, source_net_2_mst24_0, source_net_2_mst25_0, source_net_2_mst27_0, source_net_2_mst28_0, source_net_2_mst30_0, source_net_2_mst31_0, source_net_2_mst32_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=79
+89. bottom/gerber short at x=-1.609mm y=1.943mm
+   U2.N_WP, source_net_18_0, pcb_via_46 <-> U2.SO, source_net_17_0, pcb_via_47
+   pixels=78
+90. bottom/gerber short at x=-1.541mm y=0.036mm
+   TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=76
+91. bottom/gerber short at x=-4.128mm y=-2.628mm
+   pcb_plated_hole_15, source_net_33_0, pcb_via_5, pcb_via_6 <-> pcb_plated_hole_8, source_net_28_0, pcb_via_15, pcb_via_16
+   pixels=74
+92. bottom/gerber short at x=-2.118mm y=-0.396mm
+   pcb_plated_hole_5, source_net_25_0, pcb_via_20, pcb_via_21, pcb_via_22, pcb_via_23, pcb_via_24, pcb_via_25, pcb_via_26, pcb_via_27 <-> U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51
+   pixels=73
+93. bottom/gerber short at x=-2.310mm y=2.493mm
+   U2.EP <-> U2.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, pcb_plated_hole_12, SW1.pin2, SW1.pin2_internal_1, SW2.pin2, SW2.pin2_internal_1, R1.pin2, R2.pin2, C3.pin2, C4.pin2, C8.pin2, C9.pin2, C10.pin2, C11.pin2, C14.pin2, C16.pin2, TP3.pin1, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst4_0, source_net_2_mst7_0, source_net_2_mst8_0, source_net_2_mst9_0, source_net_2_mst10_0, source_net_2_mst11_0, source_net_2_mst13_0, source_net_2_mst14_0, source_net_2_mst16_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst21_0, source_net_2_mst22_0, source_net_2_mst23_0, source_net_2_mst24_0, source_net_2_mst25_0, source_net_2_mst27_0, source_net_2_mst28_0, source_net_2_mst30_0, source_net_2_mst31_0, source_net_2_mst32_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=70
+94. bottom/gerber short at x=-3.216mm y=1.562mm
+   pcb_plated_hole_5, source_net_25_0, pcb_via_20, pcb_via_21, pcb_via_22, pcb_via_23, pcb_via_24, pcb_via_25, pcb_via_26, pcb_via_27 <-> U2.VCC, pcb_plated_hole_13, R5.pin1, R6.pin1, C3.pin1, C4.pin1, C9.pin1, C16.pin1, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst12_0, source_net_0_mst14_0, source_net_0_mst15_0, source_net_0_mst17_0, source_net_0_mst18_0, source_net_0_mst19_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=65
+95. bottom/gerber short at x=-1.831mm y=2.671mm
+   U2.N_WP, source_net_18_0, pcb_via_46 <-> U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=63
+96. bottom/gerber short at x=-0.415mm y=-0.169mm
+   pcb_plated_hole_14, source_net_34_0, pcb_via_3, pcb_via_4 <-> C8.pin1, C10.pin1, C11.pin1, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101
+   pixels=61
+97. bottom/gerber short at x=-2.059mm y=-0.062mm
+   pcb_plated_hole_5, source_net_25_0, pcb_via_20, pcb_via_21, pcb_via_22, pcb_via_23, pcb_via_24, pcb_via_25, pcb_via_26, pcb_via_27 <-> TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38
+   pixels=59
+98. bottom/gerber short at x=-0.966mm y=-0.357mm
+   U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56 <-> U2.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, pcb_plated_hole_12, SW1.pin2, SW1.pin2_internal_1, SW2.pin2, SW2.pin2_internal_1, R1.pin2, R2.pin2, C3.pin2, C4.pin2, C8.pin2, C9.pin2, C10.pin2, C11.pin2, C14.pin2, C16.pin2, TP3.pin1, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst4_0, source_net_2_mst7_0, source_net_2_mst8_0, source_net_2_mst9_0, source_net_2_mst10_0, source_net_2_mst11_0, source_net_2_mst13_0, source_net_2_mst14_0, source_net_2_mst16_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst21_0, source_net_2_mst22_0, source_net_2_mst23_0, source_net_2_mst24_0, source_net_2_mst25_0, source_net_2_mst27_0, source_net_2_mst28_0, source_net_2_mst30_0, source_net_2_mst31_0, source_net_2_mst32_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=59
+99. bottom/gerber short at x=-4.606mm y=-0.638mm
+   U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51 <-> U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=50
+100. bottom/gerber short at x=-0.956mm y=0.140mm
+   U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51 <-> U2.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, pcb_plated_hole_12, SW1.pin2, SW1.pin2_internal_1, SW2.pin2, SW2.pin2_internal_1, R1.pin2, R2.pin2, C3.pin2, C4.pin2, C8.pin2, C9.pin2, C10.pin2, C11.pin2, C14.pin2, C16.pin2, TP3.pin1, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst4_0, source_net_2_mst7_0, source_net_2_mst8_0, source_net_2_mst9_0, source_net_2_mst10_0, source_net_2_mst11_0, source_net_2_mst13_0, source_net_2_mst14_0, source_net_2_mst16_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst21_0, source_net_2_mst22_0, source_net_2_mst23_0, source_net_2_mst24_0, source_net_2_mst25_0, source_net_2_mst27_0, source_net_2_mst28_0, source_net_2_mst30_0, source_net_2_mst31_0, source_net_2_mst32_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=50
+101. bottom/gerber short at x=-2.129mm y=-2.587mm
+   pcb_plated_hole_15, source_net_33_0, pcb_via_5, pcb_via_6 <-> pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32
+   pixels=49
+102. bottom/gerber short at x=-5.677mm y=-0.492mm
+   pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32 <-> TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38
+   pixels=46
+103. bottom/gerber short at x=-2.238mm y=2.537mm
+   U2.EP <-> U2.N_WP, source_net_18_0, pcb_via_46
+   pixels=46
+104. bottom/gerber short at x=-4.450mm y=-0.258mm
+   pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32 <-> U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51
+   pixels=44
+105. bottom/gerber short at x=-2.070mm y=-2.039mm
+   pcb_plated_hole_15, source_net_33_0, pcb_via_5, pcb_via_6 <-> pcb_plated_hole_7, source_net_27_0, pcb_via_17
+   pixels=43
+106. bottom/gerber short at x=-5.090mm y=-2.589mm
+   pcb_plated_hole_14, source_net_34_0, pcb_via_3, pcb_via_4 <-> pcb_plated_hole_10, source_net_30_0, pcb_via_12, pcb_via_13
+   pixels=42
+107. bottom/gerber short at x=-4.823mm y=-1.373mm
+   pcb_plated_hole_17, source_net_31_0, pcb_via_9, pcb_via_10, pcb_via_11 <-> pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32
+   pixels=39
+108. bottom/gerber short at x=-3.850mm y=1.185mm
+   U2.SI, source_net_16_0, pcb_via_48 <-> U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51
+   pixels=39
+109. bottom/gerber short at x=-2.362mm y=-0.380mm
+   U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51 <-> U2.VCC, pcb_plated_hole_13, R5.pin1, R6.pin1, C3.pin1, C4.pin1, C9.pin1, C16.pin1, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst12_0, source_net_0_mst14_0, source_net_0_mst15_0, source_net_0_mst17_0, source_net_0_mst18_0, source_net_0_mst19_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=39
+110. bottom/gerber short at x=1.662mm y=-2.128mm
+   pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32 <-> SW2.pin1, SW2.pin1_internal_1, R6.pin2, source_net_21_mst0_0, source_net_21_mst1_0, pcb_via_39, pcb_via_40
+   pixels=37
+111. bottom/gerber short at x=-3.554mm y=-2.573mm
+   pcb_plated_hole_15, source_net_33_0, pcb_via_5, pcb_via_6 <-> pcb_plated_hole_17, source_net_31_0, pcb_via_9, pcb_via_10, pcb_via_11
+   pixels=35
+112. bottom/gerber short at x=0.998mm y=2.223mm
+   source_net_8_0, pcb_via_63, pcb_via_64, pcb_via_65, pcb_via_66 <-> C8.pin1, C10.pin1, C11.pin1, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101
+   pixels=34
+113. bottom/gerber short at x=-2.146mm y=-2.332mm
+   pcb_plated_hole_14, source_net_34_0, pcb_via_3, pcb_via_4 <-> pcb_plated_hole_15, source_net_33_0, pcb_via_5, pcb_via_6
+   pixels=33
+114. bottom/gerber short at x=-5.219mm y=-1.577mm
+   pcb_plated_hole_17, source_net_31_0, pcb_via_9, pcb_via_10, pcb_via_11 <-> TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38
+   pixels=33
+115. bottom/gerber short at x=-3.140mm y=0.316mm
+   U2.SI, source_net_16_0, pcb_via_48 <-> U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51
+   pixels=33
+116. bottom/gerber short at x=-4.364mm y=0.593mm
+   TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51
+   pixels=33
+117. bottom/gerber short at x=-1.705mm y=-0.080mm
+   U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51 <-> U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=33
+118. bottom/gerber short at x=0.104mm y=1.536mm
+   U2.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, pcb_plated_hole_12, SW1.pin2, SW1.pin2_internal_1, SW2.pin2, SW2.pin2_internal_1, R1.pin2, R2.pin2, C3.pin2, C4.pin2, C8.pin2, C9.pin2, C10.pin2, C11.pin2, C14.pin2, C16.pin2, TP3.pin1, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst4_0, source_net_2_mst7_0, source_net_2_mst8_0, source_net_2_mst9_0, source_net_2_mst10_0, source_net_2_mst11_0, source_net_2_mst13_0, source_net_2_mst14_0, source_net_2_mst16_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst21_0, source_net_2_mst22_0, source_net_2_mst23_0, source_net_2_mst24_0, source_net_2_mst25_0, source_net_2_mst27_0, source_net_2_mst28_0, source_net_2_mst30_0, source_net_2_mst31_0, source_net_2_mst32_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND <-> U2.VCC, pcb_plated_hole_13, R5.pin1, R6.pin1, C3.pin1, C4.pin1, C9.pin1, C16.pin1, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst12_0, source_net_0_mst14_0, source_net_0_mst15_0, source_net_0_mst17_0, source_net_0_mst18_0, source_net_0_mst19_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=33
+119. bottom/gerber short at x=2.080mm y=-1.962mm
+   pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32 <-> TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38
+   pixels=32
+120. bottom/gerber short at x=-0.863mm y=-0.996mm
+   pcb_plated_hole_14, source_net_34_0, pcb_via_3, pcb_via_4 <-> U2.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, pcb_plated_hole_12, SW1.pin2, SW1.pin2_internal_1, SW2.pin2, SW2.pin2_internal_1, R1.pin2, R2.pin2, C3.pin2, C4.pin2, C8.pin2, C9.pin2, C10.pin2, C11.pin2, C14.pin2, C16.pin2, TP3.pin1, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst4_0, source_net_2_mst7_0, source_net_2_mst8_0, source_net_2_mst9_0, source_net_2_mst10_0, source_net_2_mst11_0, source_net_2_mst13_0, source_net_2_mst14_0, source_net_2_mst16_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst21_0, source_net_2_mst22_0, source_net_2_mst23_0, source_net_2_mst24_0, source_net_2_mst25_0, source_net_2_mst27_0, source_net_2_mst28_0, source_net_2_mst30_0, source_net_2_mst31_0, source_net_2_mst32_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=32
+121. bottom/gerber short at x=-4.097mm y=-1.769mm
+   pcb_plated_hole_14, source_net_34_0, pcb_via_3, pcb_via_4 <-> pcb_plated_hole_17, source_net_31_0, pcb_via_9, pcb_via_10, pcb_via_11
+   pixels=31
+122. bottom/gerber short at x=-4.108mm y=-2.956mm
+   pcb_plated_hole_9, source_net_29_0, pcb_via_14 <-> pcb_plated_hole_8, source_net_28_0, pcb_via_15, pcb_via_16
+   pixels=31
+123. bottom/gerber short at x=-2.547mm y=0.980mm
+   U2.EP <-> pcb_plated_hole_5, source_net_25_0, pcb_via_20, pcb_via_21, pcb_via_22, pcb_via_23, pcb_via_24, pcb_via_25, pcb_via_26, pcb_via_27
+   pixels=31
+124. bottom/gerber short at x=-3.686mm y=-6.300mm
+   pcb_plated_hole_17, source_net_31_0, pcb_via_9, pcb_via_10, pcb_via_11 <-> TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38
+   pixels=31
+125. bottom/gerber short at x=-5.332mm y=-0.089mm
+   TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=31
+126. bottom/gerber short at x=-2.196mm y=-2.340mm
+   pcb_plated_hole_14, source_net_34_0, pcb_via_3, pcb_via_4 <-> pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32
+   pixels=30
+127. bottom/gerber short at x=2.011mm y=-7.492mm
+   TP2.pin1, source_net_23_0, pcb_via_33 <-> U2.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, pcb_plated_hole_12, SW1.pin2, SW1.pin2_internal_1, SW2.pin2, SW2.pin2_internal_1, R1.pin2, R2.pin2, C3.pin2, C4.pin2, C8.pin2, C9.pin2, C10.pin2, C11.pin2, C14.pin2, C16.pin2, TP3.pin1, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst4_0, source_net_2_mst7_0, source_net_2_mst8_0, source_net_2_mst9_0, source_net_2_mst10_0, source_net_2_mst11_0, source_net_2_mst13_0, source_net_2_mst14_0, source_net_2_mst16_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst21_0, source_net_2_mst22_0, source_net_2_mst23_0, source_net_2_mst24_0, source_net_2_mst25_0, source_net_2_mst27_0, source_net_2_mst28_0, source_net_2_mst30_0, source_net_2_mst31_0, source_net_2_mst32_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=30
+128. bottom/gerber short at x=-5.557mm y=1.775mm
+   pcb_plated_hole_5, source_net_25_0, pcb_via_20, pcb_via_21, pcb_via_22, pcb_via_23, pcb_via_24, pcb_via_25, pcb_via_26, pcb_via_27 <-> U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=29
+129. bottom/gerber short at x=-1.945mm y=-2.262mm
+   pcb_plated_hole_14, source_net_34_0, pcb_via_3, pcb_via_4 <-> pcb_plated_hole_15, source_net_33_0, pcb_via_5, pcb_via_6
+   pixels=28
+130. bottom/gerber short at x=-1.201mm y=-0.106mm
+   U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51 <-> U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=28
+131. bottom/gerber short at x=1.468mm y=2.533mm
+   source_net_8_0, pcb_via_63, pcb_via_64, pcb_via_65, pcb_via_66 <-> C8.pin1, C10.pin1, C11.pin1, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101
+   pixels=28
+132. bottom/gerber short at x=-2.272mm y=-2.095mm
+   pcb_plated_hole_7, source_net_27_0, pcb_via_17 <-> pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32
+   pixels=27
+133. bottom/gerber short at x=-3.188mm y=0.579mm
+   TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U2.SI, source_net_16_0, pcb_via_48
+   pixels=27
+134. bottom/gerber short at x=-3.404mm y=0.335mm
+   TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51
+   pixels=26
+135. bottom/gerber short at x=-1.782mm y=1.575mm
+   U2.N_HOLD, source_net_19_0, pcb_via_43, pcb_via_44, pcb_via_45 <-> U2.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, pcb_plated_hole_12, SW1.pin2, SW1.pin2_internal_1, SW2.pin2, SW2.pin2_internal_1, R1.pin2, R2.pin2, C3.pin2, C4.pin2, C8.pin2, C9.pin2, C10.pin2, C11.pin2, C14.pin2, C16.pin2, TP3.pin1, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst4_0, source_net_2_mst7_0, source_net_2_mst8_0, source_net_2_mst9_0, source_net_2_mst10_0, source_net_2_mst11_0, source_net_2_mst13_0, source_net_2_mst14_0, source_net_2_mst16_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst21_0, source_net_2_mst22_0, source_net_2_mst23_0, source_net_2_mst24_0, source_net_2_mst25_0, source_net_2_mst27_0, source_net_2_mst28_0, source_net_2_mst30_0, source_net_2_mst31_0, source_net_2_mst32_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=26
+136. bottom/gerber short at x=-0.932mm y=0.176mm
+   TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51
+   pixels=25
+137. bottom/gerber short at x=0.121mm y=-5.027mm
+   U2.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, pcb_plated_hole_12, SW1.pin2, SW1.pin2_internal_1, SW2.pin2, SW2.pin2_internal_1, R1.pin2, R2.pin2, C3.pin2, C4.pin2, C8.pin2, C9.pin2, C10.pin2, C11.pin2, C14.pin2, C16.pin2, TP3.pin1, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst4_0, source_net_2_mst7_0, source_net_2_mst8_0, source_net_2_mst9_0, source_net_2_mst10_0, source_net_2_mst11_0, source_net_2_mst13_0, source_net_2_mst14_0, source_net_2_mst16_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst21_0, source_net_2_mst22_0, source_net_2_mst23_0, source_net_2_mst24_0, source_net_2_mst25_0, source_net_2_mst27_0, source_net_2_mst28_0, source_net_2_mst30_0, source_net_2_mst31_0, source_net_2_mst32_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND <-> U2.VCC, pcb_plated_hole_13, R5.pin1, R6.pin1, C3.pin1, C4.pin1, C9.pin1, C16.pin1, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst12_0, source_net_0_mst14_0, source_net_0_mst15_0, source_net_0_mst17_0, source_net_0_mst18_0, source_net_0_mst19_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=25
+138. bottom/gerber short at x=-2.176mm y=2.329mm
+   U2.N_WP, source_net_18_0, pcb_via_46 <-> U2.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, pcb_plated_hole_12, SW1.pin2, SW1.pin2_internal_1, SW2.pin2, SW2.pin2_internal_1, R1.pin2, R2.pin2, C3.pin2, C4.pin2, C8.pin2, C9.pin2, C10.pin2, C11.pin2, C14.pin2, C16.pin2, TP3.pin1, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst4_0, source_net_2_mst7_0, source_net_2_mst8_0, source_net_2_mst9_0, source_net_2_mst10_0, source_net_2_mst11_0, source_net_2_mst13_0, source_net_2_mst14_0, source_net_2_mst16_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst21_0, source_net_2_mst22_0, source_net_2_mst23_0, source_net_2_mst24_0, source_net_2_mst25_0, source_net_2_mst27_0, source_net_2_mst28_0, source_net_2_mst30_0, source_net_2_mst31_0, source_net_2_mst32_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=22
+139. bottom/gerber short at x=0.536mm y=2.508mm
+   C8.pin1, C10.pin1, C11.pin1, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101 <-> U2.VCC, pcb_plated_hole_13, R5.pin1, R6.pin1, C3.pin1, C4.pin1, C9.pin1, C16.pin1, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst12_0, source_net_0_mst14_0, source_net_0_mst15_0, source_net_0_mst17_0, source_net_0_mst18_0, source_net_0_mst19_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=21
+140. bottom/gerber short at x=-3.514mm y=-2.247mm
+   pcb_plated_hole_14, source_net_34_0, pcb_via_3, pcb_via_4 <-> pcb_plated_hole_17, source_net_31_0, pcb_via_9, pcb_via_10, pcb_via_11
+   pixels=19
+141. bottom/gerber short at x=-6.971mm y=-0.217mm
+   pcb_plated_hole_16, source_net_32_0, pcb_via_7, pcb_via_8 <-> pcb_plated_hole_7, source_net_27_0, pcb_via_17
+   pixels=19
+142. bottom/gerber short at x=1.021mm y=0.722mm
+   source_net_8_0, pcb_via_63, pcb_via_64, pcb_via_65, pcb_via_66 <-> U2.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, pcb_plated_hole_12, SW1.pin2, SW1.pin2_internal_1, SW2.pin2, SW2.pin2_internal_1, R1.pin2, R2.pin2, C3.pin2, C4.pin2, C8.pin2, C9.pin2, C10.pin2, C11.pin2, C14.pin2, C16.pin2, TP3.pin1, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst4_0, source_net_2_mst7_0, source_net_2_mst8_0, source_net_2_mst9_0, source_net_2_mst10_0, source_net_2_mst11_0, source_net_2_mst13_0, source_net_2_mst14_0, source_net_2_mst16_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst21_0, source_net_2_mst22_0, source_net_2_mst23_0, source_net_2_mst24_0, source_net_2_mst25_0, source_net_2_mst27_0, source_net_2_mst28_0, source_net_2_mst30_0, source_net_2_mst31_0, source_net_2_mst32_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=19
+143. bottom/gerber short at x=0.988mm y=2.790mm
+   source_net_6_mst1_0, pcb_via_67, pcb_via_68 <-> C8.pin1, C10.pin1, C11.pin1, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101
+   pixels=18
+144. bottom/gerber short at x=-3.079mm y=2.790mm
+   U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56 <-> U2.VCC, pcb_plated_hole_13, R5.pin1, R6.pin1, C3.pin1, C4.pin1, C9.pin1, C16.pin1, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst12_0, source_net_0_mst14_0, source_net_0_mst15_0, source_net_0_mst17_0, source_net_0_mst18_0, source_net_0_mst19_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=17
+145. bottom/gerber short at x=-2.155mm y=-0.074mm
+   pcb_plated_hole_5, source_net_25_0, pcb_via_20, pcb_via_21, pcb_via_22, pcb_via_23, pcb_via_24, pcb_via_25, pcb_via_26, pcb_via_27 <-> U2.VCC, pcb_plated_hole_13, R5.pin1, R6.pin1, C3.pin1, C4.pin1, C9.pin1, C16.pin1, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst12_0, source_net_0_mst14_0, source_net_0_mst15_0, source_net_0_mst17_0, source_net_0_mst18_0, source_net_0_mst19_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=16
+146. bottom/gerber short at x=-2.202mm y=-2.184mm
+   pcb_plated_hole_15, source_net_33_0, pcb_via_5, pcb_via_6 <-> pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32
+   pixels=15
+147. bottom/gerber short at x=-1.893mm y=-0.075mm
+   TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=14
+148. bottom/gerber short at x=-0.060mm y=-4.892mm
+   R7.pin1, source_net_12_0, pcb_via_58 <-> U2.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, pcb_plated_hole_12, SW1.pin2, SW1.pin2_internal_1, SW2.pin2, SW2.pin2_internal_1, R1.pin2, R2.pin2, C3.pin2, C4.pin2, C8.pin2, C9.pin2, C10.pin2, C11.pin2, C14.pin2, C16.pin2, TP3.pin1, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst4_0, source_net_2_mst7_0, source_net_2_mst8_0, source_net_2_mst9_0, source_net_2_mst10_0, source_net_2_mst11_0, source_net_2_mst13_0, source_net_2_mst14_0, source_net_2_mst16_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst21_0, source_net_2_mst22_0, source_net_2_mst23_0, source_net_2_mst24_0, source_net_2_mst25_0, source_net_2_mst27_0, source_net_2_mst28_0, source_net_2_mst30_0, source_net_2_mst31_0, source_net_2_mst32_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND
+   pixels=14
+149. bottom/gerber short at x=-2.231mm y=-0.391mm
+   pcb_plated_hole_5, source_net_25_0, pcb_via_20, pcb_via_21, pcb_via_22, pcb_via_23, pcb_via_24, pcb_via_25, pcb_via_26, pcb_via_27 <-> U2.VCC, pcb_plated_hole_13, R5.pin1, R6.pin1, C3.pin1, C4.pin1, C9.pin1, C16.pin1, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst12_0, source_net_0_mst14_0, source_net_0_mst15_0, source_net_0_mst17_0, source_net_0_mst18_0, source_net_0_mst19_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=12
+150. bottom/gerber short at x=-1.985mm y=0.027mm
+   pcb_plated_hole_5, source_net_25_0, pcb_via_20, pcb_via_21, pcb_via_22, pcb_via_23, pcb_via_24, pcb_via_25, pcb_via_26, pcb_via_27 <-> U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=9
+151. bottom/gerber short at x=-3.338mm y=-3.045mm
+   pcb_plated_hole_15, source_net_33_0, pcb_via_5, pcb_via_6 <-> pcb_plated_hole_17, source_net_31_0, pcb_via_9, pcb_via_10, pcb_via_11
+   pixels=8
+152. bottom/gerber short at x=-1.470mm y=0.053mm
+   U2.SCLK, source_net_15_0, pcb_via_49, pcb_via_50, pcb_via_51 <-> U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=8
+153. bottom/gerber short at x=-2.349mm y=-1.400mm
+   pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32 <-> U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=8
+154. bottom/gerber short at x=-3.692mm y=2.415mm
+   U2.N_HOLD, source_net_19_0, pcb_via_43, pcb_via_44, pcb_via_45 <-> U2.VCC, pcb_plated_hole_13, R5.pin1, R6.pin1, C3.pin1, C4.pin1, C9.pin1, C16.pin1, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst12_0, source_net_0_mst14_0, source_net_0_mst15_0, source_net_0_mst17_0, source_net_0_mst18_0, source_net_0_mst19_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=7
+155. bottom/gerber short at x=-0.432mm y=0.053mm
+   pcb_plated_hole_14, source_net_34_0, pcb_via_3, pcb_via_4 <-> TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38
+   pixels=6
+156. bottom/gerber short at x=1.375mm y=1.561mm
+   U2.GND, pcb_plated_hole_0, pcb_plated_hole_1, pcb_plated_hole_2, pcb_plated_hole_3, pcb_plated_hole_12, SW1.pin2, SW1.pin2_internal_1, SW2.pin2, SW2.pin2_internal_1, R1.pin2, R2.pin2, C3.pin2, C4.pin2, C8.pin2, C9.pin2, C10.pin2, C11.pin2, C14.pin2, C16.pin2, TP3.pin1, pcb_via_0, pcb_via_1, pcb_via_2, source_net_2_mst0_0, source_net_2_mst1_0, source_net_2_mst4_0, source_net_2_mst7_0, source_net_2_mst8_0, source_net_2_mst9_0, source_net_2_mst10_0, source_net_2_mst11_0, source_net_2_mst13_0, source_net_2_mst14_0, source_net_2_mst16_0, source_net_2_mst18_0, source_net_2_mst19_0, source_net_2_mst21_0, source_net_2_mst22_0, source_net_2_mst23_0, source_net_2_mst24_0, source_net_2_mst25_0, source_net_2_mst27_0, source_net_2_mst28_0, source_net_2_mst30_0, source_net_2_mst31_0, source_net_2_mst32_0, pcb_via_81, pcb_via_82, pcb_via_83, pcb_via_84, pcb_via_85, pcb_via_86, pcb_via_87, pcb_via_88, pcb_via_89, pcb_via_90, pcb_via_91, pcb_via_92, pcb_via_93, pcb_via_94, pcb_via_95, copperpour:GND <-> C8.pin1, C10.pin1, C11.pin1, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101
+   pixels=5
+157. bottom/gerber short at x=-0.479mm y=-0.049mm
+   TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> C8.pin1, C10.pin1, C11.pin1, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101
+   pixels=5
+158. bottom/gerber short at x=2.271mm y=-4.550mm
+   TP1.pin1, source_net_22_0, pcb_via_34, pcb_via_35, pcb_via_36, pcb_via_37, pcb_via_38 <-> U2.VCC, pcb_plated_hole_13, R5.pin1, R6.pin1, C3.pin1, C4.pin1, C9.pin1, C16.pin1, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst12_0, source_net_0_mst14_0, source_net_0_mst15_0, source_net_0_mst17_0, source_net_0_mst18_0, source_net_0_mst19_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=5
+159. bottom/gerber short at x=6.598mm y=-0.438mm
+   pcb_plated_hole_14, source_net_34_0, pcb_via_3, pcb_via_4 <-> pcb_plated_hole_11, D1.K, source_net_4_mst1_0, source_net_4_mst2_0, source_net_4_mst3_0, pcb_via_72, pcb_via_73, pcb_via_74, pcb_via_75, pcb_via_76
+   pixels=4
+160. bottom/gerber short at x=-5.478mm y=-0.980mm
+   pcb_plated_hole_7, source_net_27_0, pcb_via_17 <-> pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32
+   pixels=3
+161. bottom/gerber short at x=1.499mm y=0.000mm
+   pcb_plated_hole_15, source_net_33_0, pcb_via_5, pcb_via_6 <-> C8.pin1, C10.pin1, C11.pin1, source_net_1_mst0_0, source_net_1_mst1_0, source_net_1_mst2_0, source_net_1_mst3_0, source_net_1_mst4_0, pcb_via_96, pcb_via_97, pcb_via_98, pcb_via_99, pcb_via_100, pcb_via_101
+   pixels=3
+162. bottom/gerber short at x=-2.415mm y=-1.102mm
+   pcb_plated_hole_4, source_net_24_0, pcb_via_28, pcb_via_29, pcb_via_30, pcb_via_31, pcb_via_32 <-> U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56
+   pixels=2
+163. bottom/gerber short at x=-3.447mm y=2.695mm
+   U2.N_CS, R5.pin2, R8.pin1, source_net_14_mst0_0, source_net_14_mst1_0, source_net_14_mst2_0, pcb_via_52, pcb_via_53, pcb_via_54, pcb_via_55, pcb_via_56 <-> U2.VCC, pcb_plated_hole_13, R5.pin1, R6.pin1, C3.pin1, C4.pin1, C9.pin1, C16.pin1, source_net_0_mst2_0, source_net_0_mst3_0, source_net_0_mst9_0, source_net_0_mst10_0, source_net_0_mst12_0, source_net_0_mst14_0, source_net_0_mst15_0, source_net_0_mst17_0, source_net_0_mst18_0, source_net_0_mst19_0, pcb_via_102, pcb_via_103, pcb_via_104, pcb_via_105, pcb_via_106, pcb_via_107
+   pixels=1
+Short debug artifact written to /Users/mohan/Documents/Codex/2026-10-22/h/outputs/xiao-budget/checks/check-shorts/bitmap.png
+Short debug artifact written to /Users/mohan/Documents/Codex/2026-10-22/h/outputs/xiao-budget/checks/check-shorts/pcb.svg
