@@ -83,7 +83,7 @@ for x in d:
         if c<srj['minBoardEdgeClearance']-1e-6:
             out['board_edge_violations'].append({'trace_id':x['pcb_trace_id'],'point_index':i,
                 'x':p['x'],'y':p['y'],'copper_edge_to_board_mm':c})
-(Path(__file__).with_name('independent-geometry-audit.json')).write_text(json.dumps(out,indent=2))
+(Path(__file__).with_name('verified-geometry.json')).write_text(json.dumps(out,indent=2))
 print(json.dumps({k:v for k,v in out.items() if k not in ['board_edge_violations','trace_centerline_crossings']},indent=2))
 print('Centerline crossing witnesses:',[(x['trace_ids'],x['layer'],x['crossing']) for x in out['trace_centerline_crossings']])
 print('Board-edge violation points:',len(out['board_edge_violations']))
